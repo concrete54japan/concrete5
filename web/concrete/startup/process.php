@@ -852,7 +852,7 @@
 				
 				$data = array();
 				$data['cName'] = $_POST['cName'];
-				$data['cDescription'] = $_POST['cDescription'];
+				$data['cDescription'] = htmlentities($_POST['cDescription'], ENT_COMPAT, APP_CHARSET);
 				$data['cHandle'] = $_POST['cHandle'];
 				$data['cCacheFullPageContent'] = $_POST['cCacheFullPageContent'];
 				$data['cCacheFullPageContentLifetimeCustom'] = $_POST['cCacheFullPageContentLifetimeCustom'];
