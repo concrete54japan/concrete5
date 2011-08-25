@@ -8589,7 +8589,8 @@ tinymce.create('tinymce.ui.Separator:tinymce.ui.Control', {
 			DOM.setStyles(t.id + '_menu', {
 				left : p2.x,
 				top : p2.y + e.clientHeight,
-				zIndex : 200000
+				zIndex : 200000,
+				'position' : 'fixed'
 			});
 			e = 0;
 
