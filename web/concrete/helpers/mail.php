@@ -125,7 +125,8 @@ class MailHelper {
 		for ($i = 0; $i < count($arr); $i++) {
 			$v = $arr[$i];
 			if (isset($v[1])) {
-				$str .= '"' . $v[1] . '" <' . $v[0] . '>';
+				$name = mb_encode_mimeheader($v[1],"ISO-2022-JP",APP_CHARSET);
+				$str .= '"' . $name . '" <' . $v[0] . '>';
 			} else {
 				$str .= $v[0];
 			}
