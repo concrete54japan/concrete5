@@ -258,14 +258,17 @@ class MailHelper {
 			$mail->clearRecipients();
 			
 
-			$mail->setFrom($from[0], $from[1]);
-			$mail->setSubject($this->subject);
+			$mail->setFrom($from[0], mb_encode_mimeheader($from[1], 'ISO-2022-JP', 'B'));
+			$subject = mb_encode_mimeheader($this->subject,"ISO-2022-JP", "B");
+			$mail->setSubject($subject);
 			foreach($this->to as $to) {
-				$mail->addTo($to[0], $to[1]);
+				$mail->addTo($to[0], mb_encode_mimeheader($to[1], 'ISO-2022-JP', 'B'));
 			}
-			$mail->setBodyText($this->body);
+			$body = mb_convert_encoding($this->body, 'JIS',APP_CHARSET);
+			$mail->setBodyText($body,"ISO-2022-JP", Zend_Mime::ENCODING_7BIT);
 			if ($this->bodyHTML != false) {
-				$mail->setBodyHTML($this->bodyHTML);
+				$bodyHTML = mb_convert_encoding($this->bodyHTML, 'JIS',APP_CHARSET);
+				$mail->setBodyText($bodyHTML,"ISO-2022-JP", Zend_Mime::ENCODING_7BIT);
 			}
 			try {
 				$mail->send($transport);
