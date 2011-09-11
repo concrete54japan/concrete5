@@ -36,7 +36,7 @@ class GenerateSitemap extends Job {
 		}
 		$home .= "<url>\n";
 		$home .= "<loc>". BASE_URL.DIR_REL."</loc>\n";
-		$home .= "  <lastmod> " . date('Y-m-d') . "</lastmod>\n";
+		$home .= "  <lastmod>" . date('Y-m-d') . "</lastmod>\n";
 		$home .= "  <changefreq>" . $changefreq . "</changefreq>\n";
 		$home .= "  <priority>" . $priority . "</priority>\n";
 		$home .= "</url>\n";
