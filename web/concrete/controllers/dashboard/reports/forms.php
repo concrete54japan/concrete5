@@ -48,7 +48,7 @@ class DashboardReportsFormsController extends Controller {
 		if ($hasCBRow) {
 			echo "rowspan=\"2\" valign='bottom'";
 		}
-		echo "><b>Submitted Date</b></td>\r\n";
+		echo "><b>".t('Submitted Date')."</b></td>\r\n";
 		
 		foreach($questions as $questionId=>$question){ 
             if ($question['inputType'] == 'checkboxlist')
