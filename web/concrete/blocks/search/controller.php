@@ -17,9 +17,20 @@ class SearchBlockController extends BlockController {
 	protected $hColor = '#EFE795';
 
 	public function highlightedMarkup($fulltext, $highlight) {
+	    if(!$highlight){
+	       return $fulltext;
+	    }
+	    $highlight = str_replace("　"," ",$highlight);
+	    if(strpos($highlight," ") !== false){
+	       $highlights = explode(" ",$highlight);
+	    }else{
+	       $highlights = array($highlight);
+	    }
 		$this->hText = $fulltext;
-		$this->hHighlight  = str_replace(array('"',"'","&quot;"),'',$highlight); // strip the quotes as they mess the regex
-		$this->hText = @preg_replace( "#$this->hHighlight#i", '<span style="background-color:'. $this->hColor .';">$0</span>', $this->hText );	
+		foreach($highlights as $highlight){
+    		$this->hHighlight  = str_replace(array('"',"'","&quot;"),'',$highlight); // strip the quotes as they mess the regex
+    		$this->hText = @preg_replace( "#$this->hHighlight#i", '<span style="background-color:'. $this->hColor .';">$0</span>', $this->hText );
+		}
 		return $this->hText; 
 	}
 	
@@ -27,25 +38,28 @@ class SearchBlockController extends BlockController {
 		$text = @preg_replace("#\n|\r#", ' ', $fulltext);
 		
 		$matches = array();
-		$highlight = str_replace(array('"',"'","&quot;"),'',$highlight); // strip the quotes as they mess the regex
-		
-		$regex = '([a-z|A-Z|0-9|\.|_|\s]{0,45})'. $highlight .'([a-z|A-Z|0-9|\.|_|\s]{0,45})';
-		preg_match_all("#$regex#i", $text, $matches);
-		
-		if(!empty($matches[0])) {
-			$body_length = 0;
-			$body_string = array();
-			foreach($matches[0] as $line) {
-				$body_length += strlen($line);
-				
-				$body_string[] = $this->highlightedMarkup($line, $highlight);
-				
-				if($body_length > 150)
-					break;
-			}
-			if(!empty($body_string))
-				return @implode("....", $body_string);
-		}
+	    if(strpos($highlight," ") !== false){
+	       $highlights = explode(" ",$highlight);
+	    }else{
+	       $highlights = array($highlight);
+	    }
+	    foreach($highlights as $highlight){
+	       $fulltext = str_replace($highlight,'<span style="background-color:'. $this->hColor .';">'.$highlight."</span>",$fulltext);
+	    }
+	    $fulltext = explode('<span style="background-color:'. $this->hColor .';">',$fulltext);
+	    foreach($fulltext as $key=>$text){
+	       if($key == 0){
+	           $result = mb_substr($text,strlen($text)-40,40,"UTF-8");
+	           continue;
+	       }
+	       $texts = explode("</span>",$text);
+	       if(strlen($texts[1]) > 47){
+	           $result .= '<span style="background-color:'. $this->hColor .';">'.$texts[0].'</span>'.mb_substr($texts[1], 0 , 47 , "UTF-8")."…";
+	       }else{
+	           $result .= '<span style="background-color:'. $this->hColor .';">'.$text;
+	       }
+	    }
+        return $result;
 	}
 	
 	/** 
