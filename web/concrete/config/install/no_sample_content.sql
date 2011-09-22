@@ -75,7 +75,7 @@ INSERT INTO BlockTypes VALUES(1,'content','記事','HTML/WYSIWYGエディター�
 
 INSERT INTO CollectionVersions VALUES(2,1,NULL,NULL,NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(1,2,'ホーム','home',NULL,NOW(),NOW(),'New Version 2',1,0,1,1,NULL)
- ,(5,1,ログイン','login',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(5,1,'ログイン','login',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(6,1,'登録','register',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(7,1,'プロフィール','profile',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(8,1,'編集','edit',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
