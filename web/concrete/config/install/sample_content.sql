@@ -61,19 +61,19 @@ INSERT INTO AttributeKeyCategories VALUES(1,'collection',0,NULL)
  ,(2,'user',0,NULL)
  ,(3,'file',0,NULL);
 
-INSERT INTO AttributeKeys VALUES(1,'meta_title','Meta Title',1,0,0,0,1,1,1,0)
- ,(2,'meta_description','Meta Description',1,0,0,0,1,2,1,0)
- ,(3,'meta_keywords','Meta Keywords',1,0,0,0,1,2,1,0)
- ,(4,'exclude_nav','Exclude From Nav',1,0,0,0,1,3,1,0)
- ,(5,'exclude_page_list','Exclude From Page List',1,0,0,0,1,3,1,0)
- ,(6,'header_extra_content','Header Extra Content',1,0,0,0,1,2,1,0)
- ,(7,'exclude_search_index','Exclude From Search Index',1,0,0,0,1,3,1,0)
- ,(8,'exclude_sitemapxml','Exclude From sitemap.xml',1,0,0,0,1,3,1,0)
- ,(9,'width','Width',1,0,1,0,0,6,3,0)
- ,(10,'height','Height',1,0,1,0,0,6,3,0)
- ,(11,'tags','Tags',0,0,0,0,1,8,1,0)
- ,(12,'profile_private_messages_enabled','I would like to receive private messages.',1,0,0,0,1,3,2,0)
- ,(13,'profile_private_messages_notification_enabled','Send me email notifications when I receive a private message.',1,0,0,0,1,3,2,0);
+INSERT INTO AttributeKeys VALUES(1,'meta_title','Metaタグタイトル',1,0,0,0,1,1,1,0)
+ ,(2,'meta_description','Metaタグ説明',1,0,0,0,1,2,1,0)
+ ,(3,'meta_keywords','Metaタグキーワード',1,0,0,0,1,2,1,0)
+ ,(4,'exclude_nav','オートナビから除く',1,0,0,0,1,3,1,0)
+ ,(5,'exclude_page_list','ページリストから除く',1,0,0,0,1,3,1,0)
+ ,(6,'header_extra_content','追加ヘッダー要素',1,0,0,0,1,2,1,0)
+ ,(7,'exclude_search_index','検索インデックスから除',1,0,0,0,1,3,1,0)
+ ,(8,'exclude_sitemapxml','sitemap.xmlから除く',1,0,0,0,1,3,1,0)
+ ,(9,'width','横',1,0,1,0,0,6,3,0)
+ ,(10,'height','高さ',1,0,1,0,0,6,3,0)
+ ,(11,'tags','タグ',0,0,0,0,1,8,1,0)
+ ,(12,'profile_private_messages_enabled','プライベートメッセージを受け取る',1,0,0,0,1,3,2,0)
+ ,(13,'profile_private_messages_notification_enabled','プライベートメッセージを受け取った時にメール通知を受け取る',1,0,0,0,1,3,2,0);
 
 INSERT INTO UserAttributeKeys VALUES (12,0,0,1,0,1,0,0,1)
  ,(13,0,0,1,0,1,0,1,1);
@@ -101,15 +101,15 @@ INSERT INTO AttributeTypeCategories VALUES(1,1)
  ,(8,3)
  ,(9,2);
 
-INSERT INTO AttributeTypes VALUES(1,'text','Text',0)
- ,(2,'textarea','Text Area',0)
- ,(3,'boolean','Checkbox',0)
- ,(4,'date_time','Date/Time',0)
- ,(5,'image_file','Image/File',0)
- ,(6,'number','Number',0)
- ,(7,'rating','Rating',0)
- ,(8,'select','Select',0)
- ,(9,'address','Address',0);
+INSERT INTO AttributeTypes VALUES(1,'text','テキスト',0)
+ ,(2,'textarea','テキストエリア（複数行）',0)
+ ,(3,'boolean','チェックボックス',0)
+ ,(4,'date_time','日付/時刻',0)
+ ,(5,'image_file','ファイル/画像',0)
+ ,(6,'number','数字',0)
+ ,(7,'rating','評価',0)
+ ,(8,'select','選択',0)
+ ,(9,'address','住所',0);
 
 INSERT INTO AttributeValues VALUES(1,9,NOW(),1,6)
  ,(2,10,NOW(),1,6)
@@ -165,26 +165,26 @@ INSERT INTO BlockRelations VALUES(1,31,15,'DUPLICATE')
  ,(6,36,15,'DUPLICATE')
  ,(7,39,23,'DUPLICATE');
 
-INSERT INTO BlockTypes VALUES(1,'content','Content','HTML/WYSIWYG Editor Content.',1,0,0,0,600,465,0)
- ,(2,'html','HTML','For adding HTML by hand.',1,0,0,0,600,465,0)
- ,(3,'autonav','Auto-Nav','Creates navigation trees and sitemaps.',1,0,0,0,500,350,0)
- ,(4,'external_form','External Form','Include external forms in the filesystem and place them on pages.',1,0,0,0,300,200,0)
- ,(5,'form','Form','Build simple forms and surveys.',1,0,0,0,420,430,0)
- ,(6,'page_list','Page List','List pages based on type, area.',1,0,0,0,500,350,0)
- ,(7,'file','File','Link to files stored in the asset library.',1,0,0,0,300,250,0)
- ,(8,'image','Image','Adds images and onstates from the library to pages.',1,0,0,0,300,440,0)
- ,(9,'flash_content','Flash Content','Embeds SWF files, including flash detection.',1,0,0,0,300,240,0)
- ,(10,'guestbook','Guestbook/Comments','Adds blog-style comments (a guestbook) to your page.',1,0,1,0,300,260,0)
- ,(11,'slideshow','Slideshow','Display a running loop of images.',1,0,0,0,550,400,0)
- ,(12,'search','Search','Add a search box to your site.',1,0,0,0,400,170,0)
- ,(13,'google_map','Google Map','Enter an address and a Google Map of that location will be placed in your page.',1,0,0,0,400,220,0)
- ,(14,'video','Video Player','Embeds uploaded video into a web page. Supports AVI, WMV, Quicktime/MPEG4 and FLV formats.',1,0,0,0,300,200,0)
- ,(15,'rss_displayer','RSS Displayer','Fetch, parse and display the contents of an RSS or Atom feed.',1,0,0,0,400,170,0)
- ,(16,'youtube','Youtube Video','Embeds a Youtube Video in your web page.',1,0,0,0,400,170,0)
- ,(17,'survey','Survey','Provide a simple survey, along with results in a pie chart format.',1,0,1,0,420,300,0)
- ,(18,'date_nav','Date Navigation','A collapsible date based navigation tree',1,0,0,0,500,350,0)
- ,(19,'next_previous','Next & Previous Nav','Navigate through sibling pages.',1,0,0,0,430,300,0)
- ,(20,'tags','Tags','List pages based on type, area.',1,0,0,0,500,350,0);
+INSERT INTO BlockTypes VALUES(1,'content','記事','HTML/WYSIWYGエディター付テキストブロックです。',1,0,0,0,600,465,0)
+ ,(2,'html','HTMLコード','HTMLのコードを直接追加。',1,0,0,0,600,465,0)
+ ,(3,'autonav','オートナビ','ナビゲーションツリーやサイトマップを作成します。',1,0,0,0,500,350,0)
+ ,(4,'external_form','外部フォーム','外部で作成されたフォームスクリプトをページに埋め込みます。',1,0,0,0,300,200,0)
+ ,(5,'form','フォーム','シンプルなフォームやアンケートを作成します。結果はログに保存、メール通知機能も。',1,0,0,0,420,430,0)
+ ,(6,'page_list','ページリスト','タイプやエリアで指定した範囲のページのリストを表示します。',1,0,0,0,500,350,0)
+ ,(7,'file','ファイル','ライブラリに保存されたファイルにリンクします。（ダウンロード用）',1,0,0,0,300,250,0)
+ ,(8,'image','画像','ライブラリに保存された画像とマウスオーバー画像を表示します。',1,0,0,0,300,440,0)
+ ,(9,'flash_content','Flashコンテンツ','Flashファイルをページに組み込みます。',1,0,0,0,300,240,0)
+ ,(10,'guestbook','ゲストブック','ブログにあるようなユーザーがコメントを残せるブロックです。',1,0,1,0,300,260,0)
+ ,(11,'slideshow','スライドショー','複数の画像をスライドショーとして表示します。',1,0,0,0,550,400,0)
+ ,(12,'search','検索','検索ブロックを追加します。「管理画面」ー「メンテナンス」で検索用索引を作成する必要があります。',1,0,0,0,400,170,0)
+ ,(13,'google_map','Googleマップ','Google Mapに準拠した住所を入力すると地図が表示されます。',1,0,0,0,400,220,0)
+ ,(14,'video','ビデオプレイヤー','ムービーファイルを表示します（AVI、WMV、QuickTime/MPEG4、FLV形式に対応）',1,0,0,0,300,200,0)
+ ,(15,'rss_displayer','RSSブロック','RSSやATOMフィードを取得し表示します。',1,0,0,0,400,170,0)
+ ,(16,'youtube','YouTubeビデオ','YouTubeビデオを埋め込みます。',1,0,0,0,400,170,0)
+ ,(17,'survey','アンケート','シンプルなアンケート。結果を円グラフで表示します。',1,0,1,0,420,300,0)
+ ,(18,'date_nav','日付ナビ','伸縮する日付ナビ',1,0,0,0,500,350,0)
+ ,(19,'next_previous','「次へ」「前へ」ナビ','同じ階層ページへのリンク',1,0,0,0,430,300,0)
+ ,(20,'tags','Tags','タグクラウドを表示します。',1,0,0,0,500,350,0);
 
 INSERT INTO Blocks VALUES(1,NULL,NOW(),NOW(),'header_menu.php','1',3,1)
  ,(2,NULL,NOW(),NOW(),NULL,'1',11,1)
@@ -527,90 +527,90 @@ INSERT INTO CollectionVersionBlocks VALUES(2,1,1,'Header Nav',0,'1',0,0)
  ,(73,4,40,'Blog Post Footer',0,'0',0,0)
  ,(36,2,41,'Global',0,'1',0,0);
 
-INSERT INTO CollectionVersions VALUES(2,1,NULL,NULL,NULL,NOW(),NOW(),'Initial Version',1,0,1,1,NULL)
- ,(1,2,'Home','home',NULL,NOW(),NOW(),'New Version 2',0,0,1,1,NULL)
- ,(5,1,'Login','login',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(6,1,'Register','register',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(7,1,'Profile','profile',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(8,1,'Edit','edit',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(10,1,'Avatar','avatar',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(11,1,'Messages','messages',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(12,1,'Friends','friends',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(13,1,'Page Not Found','page_not_found',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(14,1,'Page Forbidden','page_forbidden',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(15,1,'Dashboard','dashboard',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(16,1,'Sitemap','sitemap','Whole world at a glance.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(17,1,'Full Sitemap','full',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(18,1,'Flat View','explore',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(19,1,'Page Search','search',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(20,1,'Access','access',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(21,1,'File Manager','files','All documents and images.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(22,1,'Search','search',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(23,1,'Attributes','attributes',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(24,1,'Sets','sets',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(25,1,'Access','access',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(26,1,'Reports','reports','Get data from forms and logs.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(27,1,'Form Results','forms','Get submission data.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(28,1,'Surveys','surveys',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(29,1,'Logs','logs',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(30,1,'Users and Groups','users','Add and manage people.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(31,1,'Find Users','search',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(32,1,'Add User','add',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(33,1,'Groups','groups',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(34,1,'User Attributes','attributes',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(35,1,'Login & Registration','registration',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(36,1,'Scrapbook','scrapbook','Share content across your site.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(37,1,'Pages and Themes','pages','Reskin your site.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(38,1,'Themes','themes','Reskin your site.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(39,1,'Add','add',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(40,1,'Inspect','inspect',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(41,1,'Customize','customize',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(43,1,'Page Types','types','What goes in your site.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(44,1,'Attributes','attributes',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(45,1,'Single Pages','single',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(46,1,'Add Functionality','install','Install addons & themes.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(47,1,'System & Maintenance','system','Backup, cleanup and update.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(48,1,'Jobs','jobs',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(49,1,'Backup & Restore','backup',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(50,1,'Update','update',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(51,1,'Notifications','notifications',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(52,1,'Sitewide Settings','settings','Secure and setup your site.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(53,1,'Email','mail','Enable post via email and other settings.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(54,1,'Marketplace','marketplace',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(55,1,'Download File','download_file',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(63,1,NULL,'uID=1',NULL,NOW(),NOW(),'Initial Version',1,0,NULL,NULL,NULL)
- ,(1,3,'Home','home',NULL,NOW(),NOW(),'New Version 3',1,0,1,1,NULL)
- ,(64,1,'',NULL,NULL,NOW(),NOW(),'Initial Version',1,0,NULL,NULL,NULL)
- ,(65,1,'',NULL,NULL,NOW(),NOW(),'Initial Version',1,0,NULL,1,NULL)
- ,(66,1,'',NULL,NULL,NOW(),NOW(),'Initial Version',1,0,NULL,1,NULL)
- ,(67,1,'Search','search','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
- ,(67,2,'Search','search','',NOW(),NOW(),'New Version 2',0,0,1,1,NULL)
- ,(68,1,'Search Results','search-results','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
- ,(68,2,'Search Results','search-results','',NOW(),NOW(),'New Version 2',1,0,1,1,NULL)
- ,(67,3,'Search','search','',NOW(),NOW(),'New Version 3',1,0,1,1,NULL)
- ,(69,1,'About','about','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
+INSERT INTO CollectionVersions VALUES(2,1,NULL,NULL,NULL,NOW(),NOW(),'初稿',1,0,1,1,NULL)
+ ,(1,2,'ホーム','home',NULL,NOW(),NOW(),'新しいバージョン 2',0,0,1,1,NULL)
+ ,(5,1,'ログイン','login',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(6,1,'登録','register',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(7,1,'プロフィール','profile',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(8,1,'編集','edit',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(10,1,'プロフィール画像','avatar',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(11,1,'メッセージ','messages',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(12,1,'マイフレンド','friends',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(13,1,'Page Not Found（ページが見つかりません）','page_not_found',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(14,1,'Page Forbidden（アクセス禁止）','page_forbidden',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(15,1,'管理画面','dashboard',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(16,1,'サイトマップ','sitemap','サイトの全体図',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(17,1,'全サイトマップ','full',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(18,1,'フラットビュー','explore',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(19,1,'ページ検索','search',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(20,1,'アクセス権限','access',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(21,1,'ファイルマネージャー','files','画像などのファイルを管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(22,1,'検索','search',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(23,1,'属性管理','attributes',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(24,1,'セット','sets',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(25,1,'アクセス権限','access',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(26,1,'レポート','reports','フォームやログの情報を閲覧',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(27,1,'フォーム一覧','forms','Get submission data.',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(28,1,'アンケート','surveys',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(29,1,'ログ','logs',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(30,1,'ユーザー・グループ管理','users','ユーザー追加と管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(31,1,'ユーザー検索・一覧','search',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(32,1,'ユーザー追加','add',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(33,1,'グループ','groups',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(34,1,'ユーザー項目','attributes',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(35,1,'ログイン & ユーザー登録','registration',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(36,1,'下書き','scrapbook','ブロックをサイト全体で使い回す',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(37,1,'ページとテーマ','pages','デザイン管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(38,1,'テーマ','themes','デザインを管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(39,1,'テーマ追加','add',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(40,1,'テーマ検査','inspect',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(41,1,'テーマをカスタマイズ','customize',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(43,1,'ページタイプ','types','デザイン管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(44,1,'属性情報','attributes',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(45,1,'シングルページ','single',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(46,1,'機能を追加','install','アドオンやテーマを追加',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(47,1,'システム & メンテナンス','system','バックアップ、復元、アップデート',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(48,1,'ジョブ','jobs',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(49,1,'DBバックアップ & 復元','backup',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(50,1,'更新','update',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(51,1,'お知らせ','notifications',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(52,1,'サイト全体の設定','settings','外部メールからの投稿やその他の設定',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(53,1,'Email','mail','Enable post via email and other settings.',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(54,1,'マーケットプレイス','marketplace',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(55,1,'ファイルダウンロード','download_file',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(63,1,NULL,'uID=1',NULL,NOW(),NOW(),'初稿',1,0,NULL,NULL,NULL)
+ ,(1,3,'ホーム','home',NULL,NOW(),NOW(),'新しいバージョン 3',1,0,1,1,NULL)
+ ,(64,1,'',NULL,NULL,NOW(),NOW(),'初稿',1,0,NULL,NULL,NULL)
+ ,(65,1,'',NULL,NULL,NOW(),NOW(),'初稿',1,0,NULL,1,NULL)
+ ,(66,1,'',NULL,NULL,NOW(),NOW(),'初稿',1,0,NULL,1,NULL)
+ ,(67,1,'検索','search','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
+ ,(67,2,'検索','search','',NOW(),NOW(),'新しいバージョン 2',0,0,1,1,NULL)
+ ,(68,1,'検索結果','search-results','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
+ ,(68,2,'検索結果','search-results','',NOW(),NOW(),'新しいバージョン 2',1,0,1,1,NULL)
+ ,(67,3,'検索','search','',NOW(),NOW(),'新しいバージョン 3',1,0,1,1,NULL)
+ ,(69,1,'About','about','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
  ,(69,2,'About','about','',NOW(),NOW(),'New Version 2',0,0,1,1,NULL)
  ,(69,3,'About','about','',NOW(),NOW(),'New Version 3',1,0,1,1,NULL)
- ,(70,1,'Guest Book','guest-book','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
- ,(70,2,'Guest Book','guest-book','',NOW(),NOW(),'New Version 2',0,0,1,1,NULL)
- ,(70,3,'Guestbook','guest-book','',NOW(),NOW(),'New Version 3',1,0,1,1,NULL)
- ,(71,1,'Blog','blog','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
- ,(71,2,'Blog','blog','',NOW(),NOW(),'Version 2',1,0,1,1,NULL)
- ,(72,1,'My First Blog Post','my-first-blog-post','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
- ,(72,2,'My First Blog Post','my-first-blog-post','',NOW(),NOW(),'New Version 2',0,0,1,1,NULL)
- ,(72,3,'My First Blog Post','my-first-blog-post','',NOW(),NOW(),'Version 3',0,0,1,1,NULL)
- ,(73,1,'Adding a New Post','adding-a-new-post','',NOW(),NOW(),'Initial Version',0,0,1,NULL,NULL)
- ,(73,2,'Adding a New Post','adding-a-new-post','',NOW(),NOW(),'New Version 2',0,0,1,1,NULL)
- ,(73,3,'Adding a New Post','adding-a-new-post','',NOW(),NOW(),'New Version 3',0,0,1,1,NULL)
- ,(74,1,'Members','members',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(72,4,'My First Blog Post','my-first-blog-post','',NOW(),NOW(),'New Version 4',1,0,1,1,NULL)
- ,(73,4,'Adding a New Post','adding-a-new-post','',NOW(),NOW(),'New Version 4',1,0,1,1,NULL)
- ,(36,2,'Scrapbook','scrapbook','Share content across your site.',NOW(),NOW(),'New Version 2',0,1,1,NULL,NULL)
- ,(75,1,'Composer Beta','composer','Write for your site.',NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(76,1,'Write','write',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(77,1,'Drafts','drafts',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(78,1,'Composer','composer',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL)
- ,(79,1,'Multilingual Settings','multilingual',NULL,NOW(),NOW(),'Initial Version',1,0,1,NULL,NULL);
+ ,(70,1,'ゲストブック','guest-book','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
+ ,(70,2,'ゲストブック','guest-book','',NOW(),NOW(),'新しいバージョン 2',0,0,1,1,NULL)
+ ,(70,3,'ゲストブック','guest-book','',NOW(),NOW(),'新しいバージョン 3',1,0,1,1,NULL)
+ ,(71,1,'ブログ','blog','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
+ ,(71,2,'ブログ','blog','',NOW(),NOW(),'Version 2',1,0,1,1,NULL)
+ ,(72,1,'最初のブログ投稿','my-first-blog-post','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
+ ,(72,2,'最初のブログ投稿','my-first-blog-post','',NOW(),NOW(),'新しいバージョン 2',0,0,1,1,NULL)
+ ,(72,3,'最初のブログ投稿','my-first-blog-post','',NOW(),NOW(),'新しいバージョン 3',0,0,1,1,NULL)
+ ,(73,1,'新しい投稿を追加','adding-a-new-post','',NOW(),NOW(),'初稿',0,0,1,NULL,NULL)
+ ,(73,2,'新しい投稿を追加','adding-a-new-post','',NOW(),NOW(),'新しいバージョン 2',0,0,1,1,NULL)
+ ,(73,3,'新しい投稿を追加','adding-a-new-post','',NOW(),NOW(),'新しいバージョン 3',0,0,1,1,NULL)
+ ,(74,1,'メンバー','members',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(72,4,'最初のブログ投稿','my-first-blog-post','',NOW(),NOW(),'新しいバージョン 4',1,0,1,1,NULL)
+ ,(73,4,'新しい投稿を追加','adding-a-new-post','',NOW(),NOW(),'新しいバージョン 4',1,0,1,1,NULL)
+ ,(36,2,'下書き','scrapbook','ブロックをサイト全体で使い回す',NOW(),NOW(),'新しいバージョン 2',0,1,1,NULL,NULL)
+ ,(75,1,'コンポーザーベータ','composer','Write for your site.',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(76,1,'新規','write',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(77,1,'草稿','drafts',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(78,1,'コンポーザー','composer',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(79,1,'多言語設定','multilingual',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL);
 
 INSERT INTO Collections VALUES(1,NOW(),NOW(),'home')
  ,(2,NOW(),NOW(),NULL)
@@ -681,11 +681,11 @@ INSERT INTO Collections VALUES(1,NOW(),NOW(),'home')
  ,(78,NOW(),NOW(),'composer')
  ,(79,NOW(),NOW(),'multilingual');
 
-INSERT INTO DashboardHomepage VALUES(1,'activity','Site Activity',0,0)
- ,(2,'reports','Statistics',0,0)
- ,(3,'help','Help',0,0)
- ,(4,'news','Latest News',0,0)
- ,(5,'notes','Notes',0,0);
+INSERT INTO DashboardHomepage VALUES(1,'activity','サイトアクティビティー',0,0)
+ ,(2,'reports','解析',0,0)
+ ,(3,'help','ヘルプ',0,0)
+ ,(4,'news','最新情報',0,0)
+ ,(5,'notes','管理メモ',0,0);
 
 INSERT INTO FileAttributeValues VALUES(1,1,9,1)
  ,(1,1,10,2)
@@ -735,13 +735,13 @@ INSERT INTO Files VALUES(1,NOW(),1,0,2,0,NULL)
  ,(4,NOW(),1,0,2,0,NULL)
  ,(5,NOW(),1,0,2,0,NULL);
 
-INSERT INTO Groups VALUES(1,'Guest','The guest group represents unregistered visitors to your site.',0,NULL,NULL,0,NULL)
- ,(2,'Registered Users','The registered users group represents all user accounts.',0,NULL,NULL,0,NULL)
- ,(3,'Administrators','',0,NULL,NULL,0,NULL);
+INSERT INTO Groups VALUES(1,'ゲスト','ゲストグループとは、ログインしていないサイト訪問者を指します',0,NULL,NULL,0,NULL)
+ ,(2,'登録ユーザー','登録ユーザーとは、ログインしているユーザー全員を指します',0,NULL,NULL,0,NULL)
+ ,(3,'管理者','',0,NULL,NULL,0,NULL);
 
-INSERT INTO Jobs VALUES(1,'Index Search Engine','Index the site to allow searching to work quickly and accurately.',NOW(),NOW(),0,'Index updated. 2 pages required reindexing.',0,'ENABLED','index_search',1)
- ,(2,'Generate Sitemap File','Generate the sitemap.xml file that search engines use to crawl your site.',NOW(),NOW(),0,'Sitemap XML File Saved.',0,'ENABLED','generate_sitemap',0)
- ,(3,'Process Email Posts','Polls an email account and grabs private messages/postings that are sent there..',NOW(),NOW(),0,'The Job was run successfully.',0,'ENABLED','process_email',0);
+INSERT INTO Jobs VALUES(1,'検索用索引の作成','検索ブロックを使用する際、検索用索引を作成する必要があります。',NOW(),NOW(),0,'索引が更新されました。6ページがインデックス（索引）されました。',0,'ENABLED','index_search',1)
+ ,(2,'サイトマップファイルを作成','sitemap.xmlをルートフォルダーに生成します。これを検索サイトに巡回させる事により、検索サイトへの登録がスムーズになる可能性があります。',NOW(),NOW(),0,'サイトマップXMLファイルが保存されました。',0,'ENABLED','generate_sitemap',0)
+ ,(3,'メール投稿を処理','メールサーバーにアクセスし、サイト向けメッセージや投稿を取り込みます。',NOW(),NOW(),0,'この処理は成功しました。',0,'ENABLED','process_email',0);
 
 INSERT INTO MailImporters VALUES(1,'private_message',NULL,NULL,NULL,NULL,0,NULL,0,0);
 
@@ -817,19 +817,20 @@ INSERT INTO PagePermissions VALUES(5,1,0,'r',NULL,NULL)
  ,(1,3,0,'r:rv:wa:db:av:dc:adm',NULL,NULL);
 
 
-INSERT INTO PageSearchIndex VALUES(1,'Sidebar\r\n Everything about concrete5 is completely customizable through the CMS. This is a separate area from the main content on the homepage. You can&nbsp;drag and drop blocks&nbsp;like this around your layout. \r\n &nbsp;  Welcome to concrete5 - an Open Source CMS\r\n Content Management is easy with concrete5\'s in-context editing. Just&nbsp;login&nbsp;and you can add and change things as you browse your site.&nbsp; \r\n Here\'s some videos you can watch learn how to: \r\n\r\nEdit&nbsp;this page.\r\nAdd a&nbsp;new page.\r\nAdd some basic functionality, like&nbsp;a Form.\r\nFinding &amp; adding&nbsp;more functionality and themes.\r\n\r\n We\'ve taken the liberty to build out the rest of this site with some sample content that will help you learn concrete5. Wander around a bit, or just goto the&nbsp;Dashboard &gt; Sitemap&nbsp;and delete the parts you don\'t want quickly. \r\n &nbsp;  ','Home',NULL,NULL,NOW(),NOW(),NULL)
- ,(67,'Site Map ','Search','','/search',NOW(),NOW(),NULL)
- ,(68,'','Search Results','','/search/search-results',NOW(),NOW(),NULL)
+INSERT INTO PageSearchIndex VALUES(1,'オープンソース CMS - concrete5 にようこそ\r\nconcrete5は、WEBサイトを見たまま直接編集ができるコンテンツマネジメントシステムです。ログインするとブロックと呼ばれるページの構成要素を、簡単に変更したり追加できるようになります。 \r\n 以下が簡単な操作方法へのリンクです： \r\n\r\nページの編集方法\r\n新規ページ作成方法\r\nいろいろな機能を持ったブロックを追加：フォーム\r\nテーマやアドオンをマーケットプレイスから簡単自動インストール\r\n\r\n このサイトに、いろいろなサンプルをインストールしました。各ページへは 【管理画面】- 【サイトマップ】よりアクセスできます。いろいろなブロックを各ページで追加したり削除したりしてみてください。 \r\n &nbsp;  サイドバー\r\n concrete5はすべての部分をカスタマイズ出来るCMSです。ここは、サイドバー・エリアで、メインエリアとは違うエリアです。移動モードにしドラックアンドドロップで他のエリアに自由にブロックを動かすことができます。 \r\n &nbsp;  ','ホーム',NULL,NULL,NOW(),'2010-11-26 00:16:08',NULL)
+ ,(67,'サイトマップ ','検索','','/search',NOW(),'2010-11-26 00:24:08',NULL)
+ ,(68,'','検索結果','','/search/search-results',NOW(),'2010-11-26 00:24:37',NULL)
  ,(66,' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel tellus lectus, scelerisque faucibus nunc. Curabitur lacus nibh, eleifend vel porttitor in, bibendum quis tortor. Curabitur eros ligula, scelerisque ac ultricies a, dictum ac tellus. Mauris id tellus tortor. Proin a sollicitudin libero. Nam pellentesque commodo magna, nec mattis elit pulvinar id. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris orci dui, adipiscing sit amet bibendum vel, sodales sed purus. Donec fringilla odio vel enim cursus luctus quis semper leo. Donec rhoncus odio ac elit dignissim lobortis. \r\n &nbsp;   Duis dapibus nibh eu arcu viverra tempor. Fusce auctor sapien eu mauris malesuada vel euismod orci vulputate. Curabitur at orci id quam mollis rhoncus vitae volutpat urna. Nam eget sapien at neque mollis varius sed vitae ipsum. Vestibulum commodo, eros sit amet sagittis cursus, massa mi lacinia lorem, vel pellentesque sapien purus eu lacus. Pellentesque mollis gravida enim. Fusce mi odio, elementum ut fermentum a, pharetra in quam. Mauris sed vestibulum sapien. In sit amet faucibus diam. Proin lectus quam, sodales ut posuere non, viverra a nibh. Aenean sollicitudin, diam eu elementum rutrum, nisi ante pretium mi, ut tristique ante tellus non ligula. Nam diam turpis, viverra non volutpat vel, scelerisque vel neque. In pretium, libero et vulputate varius, libero nulla blandit ligula, tincidunt egestas leo mi eu nisi. Mauris nunc augue, cursus vel viverra non, feugiat in enim. In eget dignissim est. Donec dictum leo in libero tincidunt sollicitudin hendrerit elit placerat. Aliquam vitae nunc diam, non vulputate nibh. Quisque tincidunt, dui ut rutrum feugiat, libero lorem interdum sapien, eget pharetra mi ligula ut lectus. Pellentesque consequat mollis est viverra malesuada. \r\n Curabitur eget quam vitae tellus blandit congue a sed lectus. Nunc ultrices lacus dignissim felis venenatis varius placerat eros dapibus. Nulla facilisi. Vivamus sodales accumsan convallis. Mauris congue tempus feugiat. Proin elementum fringilla leo, sit amet pretium nisl imperdiet interdum. Suspendisse volutpat cursus eros, nec porta est laoreet at. Sed porttitor suscipit augue, eu molestie justo faucibus et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus faucibus mi vel tortor consequat eget rutrum nisl ultrices. Praesent et lacinia augue. Phasellus id est id enim ultricies placerat. Etiam porta enim eu enim convallis sed eleifend metus faucibus. In ac lobortis eros. Pellentesque felis turpis, cursus sed imperdiet non, viverra vel diam. Donec vel orci mi, placerat egestas purus. Vestibulum vel diam id magna suscipit accumsan. Quisque risus felis, sagittis non iaculis id, tempus in arcu. Donec tempus metus neque. Proin malesuada dui a tortor pretium tincidunt quis at ligula. \r\n Nam laoreet faucibus purus ac pretium. Aenean euismod diam adipiscing erat semper quis sodales elit tristique. Vestibulum vel tellus eu lorem porttitor aliquet. Vestibulum bibendum viverra cursus. Aenean sit amet magna odio, convallis imperdiet metus. Duis condimentum posuere vulputate. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vitae elit ut sapien vestibulum tempor sit amet ac tortor. Donec ligula nulla, varius id ornare id, vestibulum non felis. Nullam neque erat, tristique a eleifend pellentesque, eleifend sit amet ipsum. In eget urna nibh. Phasellus scelerisque, magna ac feugiat ultricies, risus dolor volutpat quam, in rutrum nunc ante id sem. Fusce interdum scelerisque fermentum. \r\n &nbsp;  ','',NULL,NULL,NOW(),NOW(),NULL)
- ,(69,'Learn More\r\n Visit&nbsp;concrete5.org&nbsp;to learn more from the&nbsp;community&nbsp;and the&nbsp;documentation. You can also browse our&nbsp;marketplace&nbsp;for more&nbsp;add-ons&nbsp;and&nbsp;themes&nbsp;to quickly build the site you really need.&nbsp; \r\n &nbsp;  Common Tips\r\n Want to&nbsp;change your site name&nbsp;up top? \r\n Need to sell stuff on your website? Check out our&nbsp;eCommerce add-on. \r\n Help,&nbsp;I can\'t login&nbsp;anymore! \r\n &nbsp;  ','About','','/about',NOW(),NOW(),NULL)
- ,(70,'Say Hi!\r\n Here\'s a simple guestbook you can add to any page on your website to allow comments. Why not put the guestbook block in edit mode and play with the options? \r\n We also have a fully featured&nbsp;Discussions Forum Add-on&nbsp;if you need it.&nbsp; \r\n &nbsp;  ','Guestbook','','/about/guest-book',NOW(),NOW(),NULL)
+ ,(69,'もっと学ぼう！\r\n concrete5 日本語公式サイトには、気軽に質問に答えられるコミュニティーやフォーラム、ヘルプページなどがあります。本家公式のマーケットプレイスでは、拡張アドオンやテーマなどをダウンロードすることが出来ます。  よくある質問\r\n サイトヘッダー部分のサイト名の変更の仕方 \r\n index.php を隠すプリティーURLの使い方 \r\n サイトを引越ししたい方「復元（リストア）と引越の仕方」 \r\n テーマを作ったり、見栄えを変更する方法は「テーマの仕組みとデザインの仕方  ','About','','/about',NOW(),'2010-11-26 00:17:53',NULL)
+ ,(70,'コメントをどうぞ\r\n ゲストブックブロックは、どのページにも追加できて簡単なコメントを残すことが出来る基本ブロックです。このページを「編集モード」にし、ゲストブロックを選択、メニューから編集をクリックして、設定できる各種項目を確認してみてください。 \r\n また、マーケットプレイスには、掲示板機能を搭載した「Discussions Forum」もあります。 \r\n &nbsp;  ','ゲストブック','','/about/guest-book',NOW(),'2010-11-26 00:19:02',NULL)
  ,(71,'','Blog','','/about/guest-book/blog',NOW(),NOW(),NULL)
- ,(72,' This is the intro of your blog post. If your post is short, just stick it all in here. Everything in the \"Main\" block area will be displayed from the main&nbsp;blog list page.   If you tend to write long blog posts that go on, and on, and on - you should consider keeping that content in this \"Blog Post More\" block area. This area only shows up to visitors who click on the blog post\'s title or more link to read the full post.&nbsp; \r\n Keep your long posts in here and just a short synopsis up top if you\'d like a nice scannable blog.  ','My First Blog Post','','/blog/my-first-blog-post',NOW(),NOW(),NULL)
- ,(73,' In-context editing is pretty cool cool!   By now you\'ve probably watched through the basics at concrete5.org, so you\'re getting a good sense of how you can add pages around your site. To make a new blog post... \r\n\r\nGoto the blog list page, this is the holder page for all your posts in the site tree.&nbsp;\r\nClick Add Page, on the upper left.&nbsp;\r\nPick Blog Entry as a page type.&nbsp;\r\nGive it a name and hit return, or click the add page button at the bottom of the drop down. (You don\'t need to worry about all these other fields yet, you can always change them later through Edit Page &gt; Properties\r\nYou\'re now on your new blog post page, in edit mode. Start making blocks and get things looking right.&nbsp;\r\nExit Edit Mode and Publish your changes.&nbsp;\r\n ','Adding a New Post','','/blog/adding-a-new-post',NOW(),NOW(),NULL);
+ ,(72,' ここが、ブログのイントロ部分です。もしも内容が短ければ、このエリアに全てを記入するとよいでしょう。この「Main」エリアにあるブロックは「ブログ」ページでも表示されます。   「もっと読む」リンクをクリックすると、その記事のページにジャンプします。より詳しい情報を「Blog Post More」エリアにブロックを配置するとここで表示されます。この「Blog Post More」エリア部分は「ブログ」ページ（記事の一覧ページ）には表示されません。 \r\n 「Main」エリアはイントロ部分だけを書いて、ここに詳細の情報等を書いたブロックを設置することにより、ユーザーがもっと読む」リンクをクリックすると、このエリアに掲載されたブロックを表示されるページにジャンプします。  ','最初のブログ投稿','','/blog/my-first-blog-post',NOW(),'2010-11-26 00:21:35',NULL)
+ ,(73,' WEBページを見ながら直接編集するのはいいですよね。   concrete5 日本語サイトのヘルプをある程度ご覧になれましたでしょうか？ \r\n ある程度 concrete5 でのサイト運用に慣れたかと思います。新しいブログページを作る方法です。 \r\n\r\nブログページを訪れます。ここが、各ブログ投稿ページの親ページです\r\nログインした状態で、画面左上の「新規ページ」ボタンを押します\r\n「ブログ記事」ページタイプを選択\r\nページ名を入力し改行キー。もしくは、スクロールして「新規」ボタンをクリック。その他の項目は空白で構いません。後で編集モード時、ページ上部の「設定」ボタンより変更できます。\r\nすると、新しいブログ記事ページが出来上がります。ブロックを配置してページを完成させましょう\r\n「編集モード終了」ボタンを押し、ページを公開して、完成です。\r\n ','新しい投稿を追加','','/blog/adding-a-new-post',NOW(),'2010-11-26 00:23:08',NULL)
+ ,(74,'','メンバー',NULL,'/members',NOW(),'2010-11-26 00:18:03',NULL);
 
-INSERT INTO PageThemes VALUES(1,'default','Plain Yogurt\n','Plain Yogurt is concrete5\'s default theme.',0)
- ,(2,'greensalad','Green Salad Theme\n','This is concrete5\'s Green Salad site theme.',0)
- ,(3,'dark_chocolate','Dark Chocolate\n','Dark Chocolate is concrete5\'s default theme in black.',0);
+INSERT INTO PageThemes VALUES(1,'default','プレーンヨーグルト\n','concrete5 デフォルトテーマ',0)
+ ,(2,'greensalad','グリーンサラダ\n','緑を基調としたconcrete5 デフォルトテーマ',0)
+ ,(3,'dark_chocolate','ダークチョコレート\n','concrete5デフォルトの黒を基調としたテーマ￥',0);
 
 INSERT INTO PageTypeAttributes VALUES(1,1)
  ,(1,2)
@@ -848,10 +849,10 @@ INSERT INTO PageTypeAttributes VALUES(1,1)
  ,(4,3)
  ,(4,4);
 
-INSERT INTO PageTypes VALUES(1,'right_sidebar','template3.png','Right Sidebar',0)
- ,(2,'left_sidebar','template1.png','Left Sidebar',0)
- ,(3,'full','main.png','Full Width',0)
- ,(4,'blog_entry','template2.png','Blog Entry',0);
+INSERT INTO PageTypes VALUES(1,'right_sidebar','template3.png','右サイドバー',0)
+ ,(2,'left_sidebar','template1.png','左サイドバー',0)
+ ,(3,'full','main.png','全幅',0)
+ ,(4,'blog_entry','template2.png','ブログ記事',0);
 
 INSERT INTO Pages VALUES(1,1,'0',1,0,NULL,NULL,NOW(),NULL,NOW(),NULL,NULL,1,1,'OVERRIDE',NULL,0,NULL,0,11,0,0,0,1,-1,'0',0)
  ,(2,1,'1',NULL,0,NULL,NULL,NULL,NULL,NOW(),NULL,NULL,1,0,'PARENT',NULL,0,NULL,0,0,0,0,0,0,-1,'0',0)
@@ -923,15 +924,15 @@ INSERT INTO Pages VALUES(1,1,'0',1,0,NULL,NULL,NOW(),NULL,NOW(),NULL,NULL,1,1,'O
 
 
 INSERT INTO TaskPermissions VALUES(1,'access_task_permissions','Change Task Permissions','',0)
-,(2,'access_sitemap','Access Sitemap and Page Search','',0)
-,(3,'access_user_search','Access User Search','',0)
-,(4,'access_group_search','Access Group Search','',0)
-,(5,'access_page_defaults','Change Content on Page Type Default Pages','',0)
-,(6,'backup','Perform Full Database Backups','',0)
-,(7,'sudo','Sign in as User','',0)
-,(8,'uninstall_packages','Uninstall Packages','',0)
-,(9,'install_packages','Install Packages and Connect to the Marketplace','',0)
-,(10,'delete_user','Delete Users','',0);
+,(2,'access_sitemap','サイトマップやページ検索へのアクセス権','',0)
+,(3,'access_user_search','ユーザー検索へのアクセス権','',0)
+,(4,'access_group_search','グループ検索へのアクセス権','',0)
+,(5,'access_page_defaults','ページタイプのデフォルトブロックを変更できる','',0)
+,(6,'backup','データベースバックアップが出来る','',0)
+,(7,'sudo','他ユーザーとしてログインできる','',0)
+,(8,'uninstall_packages','パッケージを削除出来る','',0)
+,(9,'install_packages','マーケットプレイスへの接続とパッケージのインストールが出来る','',0)
+,(10,'delete_user','ユーザーが削除出来る','',0);
 
 INSERT INTO TaskPermissionUserGroups VALUES(1,3,0,1)
 ,(2,3,0,1)
@@ -1018,13 +1019,23 @@ INSERT INTO btContentLocal VALUES(4,'<h2>Sidebar</h2>\r\n<p>Everything about con
  ,(35,'<p>If you tend to write long blog posts that go on, and on, and on - you should consider keeping that content in this \"Blog Post More\" block area. This area only shows up to visitors who click on the blog post\'s title or more link to read the full post.&nbsp;</p>\r\n<p>Keep your long posts in here and just a short synopsis up top if you\'d like a nice scannable blog.</p>')
  ,(36,'<p>In-context editing is pretty cool cool!</p>')
  ,(38,'<p>By now you\'ve probably watched through the basics at concrete5.org, so you\'re getting a good sense of how you can add pages around your site. To make a new blog post...</p>\r\n<ol>\r\n<li>Goto the blog list page, this is the holder page for all your posts in the site tree.&nbsp;</li>\r\n<li>Click Add Page, on the upper left.&nbsp;</li>\r\n<li>Pick Blog Entry as a page type.&nbsp;</li>\r\n<li>Give it a name and hit return, or click the add page button at the bottom of the drop down. (You don\'t need to worry about all these other fields yet, you can always change them later through Edit Page &gt; Properties</li>\r\n<li>You\'re now on your new blog post page, in edit mode. Start making blocks and get things looking right.&nbsp;</li>\r\n<li>Exit Edit Mode and Publish your changes.&nbsp;</li>\r\n</ol>')
- ,(41,'<p>{[CCM:SITE]}</p>');
+ ,(41,'<p>concrete5</p>')
+ ,(42,'<h1>オープンソース CMS - concrete5 にようこそ</h1>\r\n<p>concrete5は、WEBサイトを見たまま直接編集ができるコンテンツ・マネジメント・システムです。<a href=\"./index.php/login\" target=\"_blank\">ログイン</a>するとブロックと呼ばれるページの構成要素を変更したり追加できるようになります。</p>\r\n<p>以下が簡単な操作方法へのリンクです：</p>\r\n<ul>\r\n<li><a title=\"ログイン・編集の基本\" href=\"http://concrete5-japan.org/help/editing/login/\" target=\"_blank\">ページの編集方法</a></li>\r\n<li><a href=\"http://concrete5-japan.org/help/editing/add-a-page/\" target=\"_blank\">新規ページ作成方法</a></li>\r\n<li>いろいろな機能を持ったブロックを追加：<a href=\"http://www.youtube.com/watch?v=aZ6YfVvfybQ\" target=\"_blank\">フォーム</a></li>\r\n<li>テーマやアドオンを<a href=\"http://concrete5-japan.org/help/editing/install_theme_and_blocks/\" target=\"_blank\">マーケットプレイスから簡単自動インストール</a></li>\r\n</ul>\r\n<p>このサイトに、いろいろなサンプルをインストールしました。各ページへは 【<a title=\"管理画面\" href=\"./index.php?cID=15\">管理画面</a>】- 【<a title=\"サイトマップ\" href=\"./index.php?cID=16\">サイトマップ</a>】よりアクセスできます。いろいろなブロックを各ページで追加したり削除したりしてみてください。</p>\r\n<p>&nbsp;</p>')
+ ,(43,'<h2>サイドバー</h2>\r\n<p>concrete5はすべての部分をカスタマイズ出来るCMSです。ここは、サイドバー・エリアで、メインエリアとは違うエリアです。移動モードにしドラックアンドドロップで自由に動かすことができます。</p>\r\n<p>&nbsp;</p>')
+ ,(44,'<h1>concrete5についてもっと学ぼう！</h1>\r\n<p>concrete5 日本語公式サイトには、気軽に質問できる<a href=\"http://concrete5-japan.org/community/\" target=\"_blank\">コミュニティー</a>や<a href=\"http://concrete5-japan.org/community/forums/\" target=\"_blank\">フォーラム</a>、<a href=\"http://concrete5-japan.org/help/\" target=\"_blank\">ヘルプ</a>ページなどがあります。本家公式の<a href=\"http://www.concrete5.org/marketplace/\" target=\"_blank\">マーケットプレイス</a>では、<a href=\"http://www.concrete5.org/marketplace/addons/\" target=\"_blank\">拡張アドオン</a>や<a href=\"http://www.concrete5.org/marketplace/themes/\" target=\"_blank\">テーマ</a>などをダウンロードすることが出来ます。</p>')
+ ,(45,'<h2>よくある質問</h2>\r\n<p>サイトヘッダー部分の<a href=\"http://concrete5-japan.org/help/faq/change-sitename/\" target=\"_blank\">サイト名の変更の仕方</a></p>\r\n<p>index.php を隠す<a href=\"http://concrete5-japan.org/help/faq/how_to_use_prettyurl/\" target=\"_blank\">プリティーURLの使い方</a></p>\r\n<p>サイトを引越ししたい方「<a href=\"http://concrete5-japan.org/help/install/how-to-restore/\" target=\"_blank\">復元（リストア）と引越の仕方</a>」</p>\r\n<p>テーマを作ったり、見栄えを変更する方法は「<a href=\"http://concrete5-japan.org/help/design/\" target=\"_blank\">テーマの仕組みとデザインの仕方</a>」</p>')
+ ,(46,'<h1>コメントをどうぞ</h1>\r\n<p>ゲストブックブロックは、どのページにも追加できて簡単なコメントを残すことが出来る基本ブロックです。このページを「編集モード」にし、ゲストブロックを選択、メニューから編集をクリックして、設定できる各種項目を確認してみてください。</p>\r\n<p>また、マーケットプレイスには、掲示板機能を搭載した「<a title=\"Forums for concrete5\" href=\"http://www.concrete5.org/marketplace/addons/discussion/\" target=\"_blank\">Discussions Forum</a>」もあります。</p>\r\n<p>&nbsp;</p>')
+ ,(47,'<p>ここが、ブログのイントロ部分です。もしも内容が短ければ、このエリアに全てを記入するとよいでしょう。この「Main」エリアにあるブロックは「<a title=\"ブログ\" href=\"./index.php?cID=71\">ブログ</a>」ページでも表示されます。</p>')
+ ,(48,'<p>ブログやホームページにあるように「もっと読む」リンクをクリックした時に、より詳しい情報を掲載したい場合は、この「Blog Post More」エリアにブロックを配置してください。このエリア部分は「<a title=\"ブログ\" href=\"./index.php?cID=71\">ブログ</a>」ページには表示されません。</p>\r\n<p>「Main」エリアはイントロ部分だけを書いて、この「Blog Post More」エリアに詳細の情報等を書いたブロックを設置することにより、ユーザーが「もっと読む」リンクをクリックすると、投稿記事の詳細ページに遷移して、このエリアに配置されたブロックが表示されるようになります。</p>')
+ ,(49,'<p>ページを見たまま直接編集するのはいいですよね。</p>')
+ ,(50,'<p>concrete5 日本語サイトの<a href=\"http://concrete5-japan.org/help/\" target=\"_blank\">ヘルプ</a>をご覧になりましたでしょうか？</p>\r\n<p>ある程度 concrete5 でのサイト運用にについて理解できたと思います。<br />新しいブログページを作る方法は、</p>\r\n<ol>\r\n<li><a title=\"ブログ\" href=\"./index.php?cID=71\">ブログ</a>ページを訪れます。ここが、各ブログ投稿ページの親ページです</li>\r\n<li>ログインした状態で、画面左上の「新規ページ」ボタンを押します</li>\r\n<li>「ブログ記事」ページタイプを選択</li>\r\n<li>ページ名を入力し改行キー。もしくは、スクロールして「新規」ボタンをクリック。その他の項目は空白で構いません。後で編集モード時、ページ上部の「設定」ボタンより変更できます。</li>\r\n<li>すると、新しいブログ記事ページが出来上がります。ブロックを配置してページを完成させましょう</li>\r\n<li>「編集モード終了」ボタンを押し、ページを公開して、完成です。</li>\r\n</ol>')
+ ,(51,'<h1>サイトマップ</h1>');
 
 INSERT INTO btDateNav VALUES(18,0,0,0,4,0,'current_page',0,0,0,0,0,0)
  ,(28,0,71,1,0,0,'current_month',0,0,0,0,0,0);
 
-INSERT INTO btGuestBook VALUES(17,0,'Comments:','M jS, Y',1,1,0,'')
- ,(27,0,'Comments:','M jS, Y',1,1,0,'');
+INSERT INTO btGuestBook VALUES(17,0,'コメント:','Y年m月d日',1,1,0,'')
+ ,(27,0,'コメント:','Y年m月d日',1,1,0,'');
 
 INSERT INTO btNavigation VALUES(1,'display_asc','top',0,0,'none','enough',0,0)
  ,(3,'display_asc','second_level',0,0,'relevant','enough',0,0)
@@ -1035,14 +1046,16 @@ INSERT INTO btNavigation VALUES(1,'display_asc','top',0,0,'none','enough',0,0)
  ,(14,'display_asc','top',0,0,'relevant_breadcrumb','enough',0,0)
  ,(20,'display_asc','top',0,0,'all','all',0,0);
 
-INSERT INTO btNextPrevious VALUES(40,'next_previous','Next','Previous',1,1,1,1,'display_asc');
+INSERT INTO btNextPrevious VALUES(40,'next_previous','次','前',1,1,1,1,'display_asc');
 
 INSERT INTO btPageList VALUES(30,10,'chrono_desc',0,0,1,1,4,1,'Blog','',0,0,0);
 
-INSERT INTO btSearch VALUES(19,'Search Results','Search','','')
- ,(22,'Search Your Site','Go','','/search/search-results')
- ,(29,'Tags','','','/search/search-results');
-
+INSERT INTO btSearch VALUES(19,'検索結果','検索','','')
+ ,(22,'サイトを検索','検索','','/search/search-results')
+ ,(29,'タグ','','','/search/search-results');
+ ,(52,'サイトを検索','検索','','/search/search-results')
+ ,(53,'検索結果','検索','','');
+ 
 INSERT INTO btSlideshow VALUES(2,0,'ORDER',NULL,NULL);
 
 INSERT INTO btSlideshowImg VALUES(1,2,5,'',5,2,0,0,192)
@@ -1050,17 +1063,17 @@ INSERT INTO btSlideshowImg VALUES(1,2,5,'',5,2,0,0,192)
  ,(3,2,2,'',5,2,0,2,192)
  ,(4,2,3,'',5,2,0,3,192);
 
-INSERT INTO btSurvey VALUES(37,'What\'s easiest?',0);
+INSERT INTO btSurvey VALUES(37,'一番簡単なのは？',0);
 
-INSERT INTO btSurveyOptions VALUES(1,37,'Fixing a typo when I see it.',0)
- ,(2,37,'Adding a form as easily as content.',1)
- ,(3,37,'Block area layouts are pretty cool.',2);
+INSERT INTO btSurveyOptions VALUES(1,37,'ページの修正',0)
+ ,(2,37,'フォームを手軽に追加',1)
+ ,(3,37,'レイアウトを気軽に追加',2);
 
 INSERT INTO btTags VALUES(23,'Tags',68,'page',10)
  ,(33,'Tags',68,'page',10)
  ,(39,'Tags',68,'page',10);
 
-INSERT INTO btYouTube VALUES(6,'Basic Editing','http://www.youtube.com/watch?v=oYSOFTNLbKY','','',0);
+INSERT INTO btYouTube VALUES(6,'20分で分かる concrete5 (Part 1)','http://www.youtube.com/watch?v=ioASHU8CaGI','','',0);
 
 INSERT INTO CollectionSearchIndexAttributes VALUES(2,NULL,NULL,NULL,0,0,NULL,0,0,NULL)
  ,(1,NULL,NULL,NULL,0,0,NULL,0,0,NULL)
