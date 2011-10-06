@@ -59,8 +59,19 @@ class PageList extends DatabaseItemList {
 	 */
 	public function filterByKeywords($keywords, $simple = false) {
 		$db = Loader::db();
-		$kw = $db->quote($keywords);
-		$qk = $db->quote('%' . $keywords . '%');
+		
+		if(strpos($keywords," ") !== false){
+		  $keywords = explode(" ",$keywords);
+		  $kw = array();
+		  $qk = array();
+		  foreach($keywords as $keyword){
+    		$kw[] = $db->quote($keyword);
+    		$qk[] = $db->quote('%' . $keyword . '%');
+          }
+		}else{
+    		$kw = $db->quote($keywords);
+    		$qk = $db->quote('%' . $keywords . '%');
+		}
 		Loader::model('attribute/categories/collection');		
 		$keys = CollectionAttributeKey::getSearchableIndexedList();
 		$attribsStr = '';
@@ -70,8 +81,22 @@ class PageList extends DatabaseItemList {
 		}
 
 		if ($simple || $this->indexModeSimple) { // $this->indexModeSimple is set by the IndexedPageList class
-			$this->filter(false, "(psi.cName like $qk or psi.cDescription like $qk or psi.content like $qk {$attribsStr})");		
+		    if(is_array($kw)){
+		        $qcName = implode(" AND psi.cName like ",$qk);
+		        $qcName = "psi.cName like ".$qcName;
+		        $qcDescription = implode(" AND psi.cDescription like ",$qk);
+		        $qcDescription = "psi.cDescription like ".$qcDescription;
+		        $qcontent = implode(" AND psi.content like ",$qk);
+		        $qcontent = "psi.content like ".$qcontent;
+                $this->filter(false, "((".$qcName.") or (".$qcDescription.") or (".$qcontent.") {$attribsStr})");;
+		    }else{
+                $this->filter(false, "(psi.cName like $qk or psi.cDescription like $qk or psi.content like $qk {$attribsStr})");
+			}		
+		  
 		} else {
+		    if(is_array($kw)){
+		      $kw = implode(" ",$kw);
+		    }
 			$this->indexedSearch = true;
 			$this->indexedKeywords = $keywords;
 			$this->autoSortColumns[] = 'cIndexScore';
