@@ -30,7 +30,7 @@
 							$translate = new Zend_Translate('gettext', DIR_BASE ."/".DIRNAME_UPDATES."/".DIRNAME_APP_UPDATED. '/languages/' . ACTIVE_LOCALE, ACTIVE_LOCALE);
 						}
 					}
-					if (is_dir(DIR_BASE . '/languages/' . ACTIVE_LOCALE)) {
+					else if (is_dir(DIR_BASE . '/languages/' . ACTIVE_LOCALE)) {
 							$this->translate = new Zend_Translate('gettext', DIR_BASE . '/languages/' . ACTIVE_LOCALE, ACTIVE_LOCALE);
 					}
 				}
