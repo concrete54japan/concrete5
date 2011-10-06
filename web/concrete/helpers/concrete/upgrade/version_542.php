@@ -44,14 +44,17 @@ class ConcreteUpgradeVersion542Helper {
 		$sp = Page::getByPath('/dashboard/composer/write');
 		if ($sp->isError()) {
 			$d3 = SinglePage::add('/dashboard/composer/write');
+			$d3->update(array('cName'=>t('Composer Write'), 'cDescription' => t('Write for your site.')));
 		}
 		$sp = Page::getByPath('/dashboard/composer/drafts');
 		if ($sp->isError()) {
 			$d4 = SinglePage::add('/dashboard/composer/drafts');
+			$d4->update(array('cName'=>t('Composer Drafts'), 'cDescription' => t('Write for your site.')));
 		}
 		$sp = Page::getByPath('/dashboard/pages/types/composer');
 		if ($sp->isError()) {
 			$d5 = SinglePage::add('/dashboard/pages/types/composer');
+			$d5->update(array('cName'=>t('Composer PageType'), 'cDescription' => t('Write for your site.')));
 		}
 	}
 	
