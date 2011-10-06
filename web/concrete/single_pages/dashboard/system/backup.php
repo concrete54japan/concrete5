@@ -9,7 +9,7 @@ function confirmDelete(strFn) {
    $('#confirmDelete').clone().attr('id', 'confirmDelete'+dNum).appendTo('body');
    var alink = $('#confirmDelete' + dNum + ' input[name=backup_file]').val(strFn); 
    confirmdlg = $.fn.dialog.open({
-            title: 'Are you sure?',
+            title: '<?php echo t("Are you sure?") ?>',
             'element': $('#confirmDelete' + dNum), 
             width: 300,
             modal: false,
@@ -26,7 +26,7 @@ function confirmRestore(strFn) {
    var alink = $('#confirmRestore' + rNum + ' input[name=backup_file]').val(strFn); 
    $('#confirmRestore' + rNum + ' .confirmActionBtn a').attr('href',alink); 
    confirmdlg = $.fn.dialog.open({
-            title: 'Are you sure?',
+            title: '<?php echo t("Are you sure?") ?>',
             'element': $('#confirmRestore' + rNum), 
             width: 300,
             modal: false,
@@ -67,7 +67,7 @@ $(document).ready(function () {
 <input type="hidden" name="backup_file" value="" />
 <?=$ifHelper->button_js(t('Cancel'),"$.fn.dialog.close(0)", 'left');?>
 <span class="confirmActionBtn">
-<?=$ifHelper->submit('Delete Backup','right');?></span>
+<?=$ifHelper->submit(t('Delete Backup'),'right');?></span>
 
 </form>
 </div> 
@@ -84,7 +84,7 @@ $(document).ready(function () {
 <input type="hidden" name="backup_file" value="" />
 <?=$ifHelper->button_js(t('Cancel'),"$.fn.dialog.close(0)", 'left');?>
 <span class="confirmActionBtn">
-<?=$ifHelper->submit('Restore Backup','right');?></span>
+<?=$ifHelper->submit(t('Restore Backup'),'right');?></span>
 </form>
 </div> 
 
