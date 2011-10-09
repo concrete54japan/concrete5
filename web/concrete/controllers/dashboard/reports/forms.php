@@ -35,6 +35,9 @@ class DashboardReportsFormsController extends Controller {
 		$date = date('Ymd');
 		header("Content-Disposition: inline; filename=".$fileName."_form_data_{$date}.xls"); 
 		header("Content-Title: ".$surveys[$questionSet]['surveyName']." Form Data Output - Run on {$date}");		
+		echo "<html>\r\n";
+		echo "<head><META http-equiv=Content-Type content=\"text/html; charset=".APP_CHARSET."\"></head>\r\n";
+		echo "<body>\r\n";
 		echo "<table>\r\n";
 		$hasCBRow = false;
 		foreach($questions as $questionId=>$question){ 
@@ -125,7 +128,9 @@ class DashboardReportsFormsController extends Controller {
 			}
 			echo "\t</tr>\r\n";
 		}
-		echo "</table>\r\n";		
+		echo "</table>\r\n";
+		echo "</body>\r\n";
+		echo "</html>\r\n";
 		die;
 	}	
 
