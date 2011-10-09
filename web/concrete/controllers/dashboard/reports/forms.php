@@ -60,9 +60,9 @@ class DashboardReportsFormsController extends Controller {
             {
 			    echo "\t\t<td ";
 			    if ($hasCBRow) {
-			    	echo "rowspan=\"2\" valign='bottom'>";
+			    	echo "rowspan=\"2\" valign='bottom'";
 			    }
-			    echo "<b>\r\n";
+			    echo "><b>\r\n";
             }
 			echo "\t\t\t".$questions[$questionId]['question']."\r\n";
 			echo "\t\t</b></td>\r\n";			
