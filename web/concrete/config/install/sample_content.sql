@@ -682,10 +682,10 @@ INSERT INTO Collections VALUES(1,NOW(),NOW(),'home')
  ,(79,NOW(),NOW(),'multilingual');
 
 INSERT INTO DashboardHomepage VALUES(1,'activity','サイトアクティビティー',0,0)
- ,(2,'reports','解析',0,0)
+ ,(2,'reports','アクセス解析',0,0)
  ,(3,'help','ヘルプ',0,0)
  ,(4,'news','最新情報',0,0)
- ,(5,'notes','管理メモ',0,0);
+ ,(5,'notes','管理ノート',0,0);
 
 INSERT INTO FileAttributeValues VALUES(1,1,9,1)
  ,(1,1,10,2)
