@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: concrete5.4.2.1 Japanese\n"
 "Report-Msgid-Bugs-To: concrete5@concrete5-japan.org\n"
 "POT-Creation-Date: 2009-04-20 12:54-0700\n"
-"PO-Revision-Date: 2011-10-12 22:18+0900\n"
+"PO-Revision-Date: 2011-10-13 23:58+0900\n"
 "Last-Translator: \n"
 "Language-Team: Usagi Project <concrete5@concrete5-japan.org>\n"
 "MIME-Version: 1.0\n"
@@ -6127,4 +6127,10 @@ msgstr "最新情報"
 
 msgid "Notes"
 msgstr "管理ノート"
+
+msgid "Delete Backup"
+msgstr "バックアップ削除"
+
+msgid "Restore Backup"
+msgstr "バックアップ復元"
 
