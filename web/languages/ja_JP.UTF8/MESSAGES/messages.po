@@ -6134,3 +6134,5 @@ msgstr "バックアップ削除"
 msgid "Restore Backup"
 msgstr "バックアップ復元"
 
+msgid "Restoration Sucessful"
+msgstr "復元が成功しました。"
