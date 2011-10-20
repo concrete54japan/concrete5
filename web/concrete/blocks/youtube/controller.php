@@ -1,7 +1,9 @@
-<?php  
+<?
 	defined('C5_EXECUTE') or die("Access Denied.");
 	class YoutubeBlockController extends BlockController {
 		
+		public $pobj;
+		 
 		protected $btTable = 'btYouTube';
 		protected $btInterfaceWidth = "400";
 		protected $btInterfaceHeight = "170";
@@ -31,6 +33,10 @@
 		function on_page_view() {
 			$html = Loader::helper('html');
 			$this->addHeaderItem($html->javascript('swfobject.js'));
+		}
+		
+		public function getJavaScriptStrings() {
+			return array('youtube-required' => t('Please enter a valid YouTube URL.'));
 		}
 		
 		function __construct($obj = null) {		
