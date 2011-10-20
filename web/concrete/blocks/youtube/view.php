@@ -18,7 +18,7 @@ if ($c->isEditMode()) { ?>
 	</div>
 <?php   } elseif ($vPlayer==1) { ?>
 	
-	<div id="youtube<?php   echo $bID?>">
+	<div id="youtube<?php echo $bID?>" class="youtubeBlock">
 	
 	<?php   if($url['host'] == 'youtu.be') { ?>
 		<iframe class="youtube-player" type="text/html" width="<?php   echo $vWidth; ?>" height="<?php   echo $vHeight; ?>" src="http://www.youtube.com/embed/<?php  echo $url['path']?>" frameborder="0"></iframe>
@@ -28,7 +28,7 @@ if ($c->isEditMode()) { ?>
 	</div>
 <?php   } else { ?>
 	
-	<div id="youtube<?php   echo $bID?>"><?php   echo t('You must install Adobe Flash to view this content.')?></div>
+	<div id="youtube<?php echo $bID?>" class="youtubeBlock"><?php   echo t('You must install Adobe Flash to view this content.')?></div>
 	
 	<?php   
 	
