@@ -106,6 +106,15 @@ class Log {
 		$db = Loader::db();
 		$db->Execute("delete from Logs where logIsInternal = 0");
 	}
+
+	/** 
+	 * Removes log entries by type- these are entries that an app owner has written and don't have a builtin C5 type
+	 * @param string $type Is a lowercase string that uses underscores instead of spaces, e.g. sent_emails
+	 */
+	public function clearByType($type) {
+		$db = Loader::db();
+		$db->Execute("delete from Logs where logType = ?", array($type));
+	}
 	
 	public function clearInternal() {
 		$db = Loader::db();
