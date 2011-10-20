@@ -91,7 +91,10 @@ class Log {
 		}
 	}
 
-	public static function addEntry($message, $namespace = null) {
+	public static function addEntry($message, $namespace = false) {
+		if (!$namespace) {
+			$namespace = t('debug');
+		}
 		$l = new Log($namespace, false);
 		$l->write($message);
 	}
