@@ -112,7 +112,7 @@ class DashboardSystemBackupController extends Controller {
 			}		
 		}
 		
-		$this->set("message","Restoration Sucessful");
+		$this->set("message",t("Restoration Sucessful"));
 	
 		//reset perms for security! 
 		chmod(DIR_FILES_BACKUPS . '/'. $file, 000);
