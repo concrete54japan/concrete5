@@ -38,9 +38,9 @@ $this->addHeaderItem($html->javascript('jquery.rating.js', false, true));
 $this->addHeaderItem($html->javascript('jquery.colorpicker.js', false, true));
 	
 if (ACTIVE_LOCALE != 'en_US') {
-	$dlocale = str_replace('_', '-', ACTIVE_LOCALE);
-	$this->addHeaderItem($html->javascript('i18n/ui.datepicker-' . $dlocale . '.js', false, true));
-	$this->addHeaderItem('<script type="text/javascript">head.ready(function() { jQuery.datepicker.setDefaults({dateFormat: \'yy-mm-dd\'}); });</script>');
+	$dlocale = str_replace('_', '-', LANGUAGE);
+	$this->addHeaderItem($html->javascript('i18n/ui.datepicker-' . $dlocale . '.js'));
+	$this->addHeaderItem('<script type="text/javascript">$(function() { jQuery.datepicker.setDefaults({dateFormat: \'yy-mm-dd\'}); });</script>');
 }
 
 $this->addHeaderItem($html->javascript('ccm.dialog.js', false, true));

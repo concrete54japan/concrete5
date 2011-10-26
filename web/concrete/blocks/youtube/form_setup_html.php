@@ -12,7 +12,16 @@ if (!$bObj->vHeight) {
 	$bObj->vHeight=344;
 }
 
+<?
+if (!$bObj->vWidth) {
+	$bObj->vWidth=425;
+}
+if (!$bObj->vHeight) {
+	$bObj->vHeight=344;
+}
+
 ?>
+
 <table id="videoBlockSetup" style="width:100%"> 
 	<tr>
 		<th><?=t('Title')?></th>

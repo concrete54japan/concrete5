@@ -332,6 +332,7 @@ class File extends Object {
 		$f = File::getByID($fID);
 		
 		$fv = $f->addVersion($filename, $prefix, $data);
+		Events::fire('on_file_add', $f, $fv);
 			
 		return $fv;
 	}
@@ -377,6 +378,7 @@ class File extends Object {
 			''));;
 			
 		$fv = $this->getVersion($fvID);
+		Events::fire('on_file_version_add', $fv);
 		return $fv;
 	}
 	
@@ -517,7 +519,7 @@ class File extends Object {
 		if(!isset($rcID) || !is_numeric($rcID)) {
 			$rcID = 0;
 		}
-		
+		Events::fire('on_file_download', $fv, $u);
 		$db = Loader::db();
 		$db->Execute('insert into DownloadStatistics (fID, fvID, uID, rcID) values (?, ?, ?, ?)',  array( $this->fID, intval($fvID), $uID, $rcID ) );		
 	}

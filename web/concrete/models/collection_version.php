@@ -86,7 +86,7 @@
 					$cv->setPropertiesFromArray($row);
 				}
 			}
-						
+			
 			// load the attributes for a particular version object
 			Loader::model('attribute/categories/collection');			
 			$cv->attributes = CollectionAttributeKey::getAttributes($c->getCollectionID(), $cvID);
