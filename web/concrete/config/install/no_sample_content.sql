@@ -111,11 +111,7 @@ INSERT INTO CollectionVersions VALUES(2,1,NULL,NULL,NULL,NOW(),NOW(),'初稿',1,
  ,(39,1,'テーマ追加','add',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(40,1,'テーマ検査','inspect',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(41,1,'テーマカスタマイズ','customize',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
-<<<<<<< HEAD
- ,(43,1,'ページタイプ','types','What goes in your site.',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
-=======
  ,(43,1,'ページタイプ','types','ページタイプの設定',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
->>>>>>> a571287472c42352d24b110be0f2adcecb7231e6
  ,(44,1,'属性情報','attributes',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(45,1,'シングルページ','single',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(46,1,'機能を追加','install','アドオンやテーマを追加',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
