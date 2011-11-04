@@ -6136,3 +6136,211 @@ msgstr "バックアップ復元"
 
 msgid "Restoration Sucessful"
 msgstr "復元が成功しました。"
+
+#: web/concrete/blocks/date_nav/form_setup_html.php:73
+msgid "Hierarchy"
+msgstr "スライド式"
+
+#: web/concrete/blocks/date_nav/form_setup_html.php:74
+msgid "Flat"
+msgstr "フラット"
+
+#: web/concrete/blocks/date_nav/form_setup_html.php:79
+msgid "Current Page"
+msgstr "現在のページ"
+
+#: web/concrete/blocks/date_nav/form_setup_html.php:80
+msgid "Current Month"
+msgstr "現在の月"
+
+#: web/concrete/blocks/date_nav/form_setup_html.php:85
+msgid "Titles"
+msgstr "タイトル"
+
+#: web/concrete/blocks/date_nav/form_setup_html.php:86
+msgid "Titles &amp; Descriptions"
+msgstr "タイトル &amp; 概要"
+
+#: web/concrete/blocks/form/form_setup_html.php:181
+msgid "Radio Buttons"
+msgstr "ラジオボタン（単一選択）"
+
+#: web/concrete/blocks/slideshow/fileset_row_include.php:4
+msgid "File Set:"
+msgstr "ファイルセット："
+
+#: web/concrete/blocks/youtube/view.php:17
+msgid "YouTube Video disabled in edit mode."
+msgstr ""
+
+#: web/concrete/blocks/youtube/form_setup_html.php:31
+msgid "YouTube URL"
+msgstr "YouTubeビデオURL"
+
+#: web/concrete/blocks/youtube/form_setup_html.php:51
+#, fuzzy
+msgid "iFrame - Works in more devices"
+msgstr ""
+
+#: web/concrete/blocks/youtube/form_setup_html.php:52
+#, fuzzy
+msgid "Flash Embed - Legacy method"
+msgstr ""
+
+#: web/concrete/blocks/survey/controller.php:217
+msgid "No data is available yet."
+msgstr ""
+
+#: web/concrete/blocks/flash_content/add.php:12
+#: web/concrete/blocks/flash_content/edit.php:15
+#, fuzzy
+msgid "low"
+msgstr ""
+
+#: web/concrete/blocks/flash_content/add.php:13
+#: web/concrete/blocks/flash_content/edit.php:16
+#, fuzzy
+msgid "autolow"
+msgstr ""
+
+#: web/concrete/blocks/flash_content/add.php:14
+#: web/concrete/blocks/flash_content/edit.php:17
+#, fuzzy
+msgid "autohigh"
+msgstr ""
+
+#: web/concrete/blocks/flash_content/add.php:15
+#: web/concrete/blocks/flash_content/edit.php:18
+#, fuzzy
+msgid "medium"
+msgstr ""
+
+#: web/concrete/blocks/flash_content/add.php:16
+#: web/concrete/blocks/flash_content/edit.php:19
+#, fuzzy
+msgid "high"
+msgstr ""
+
+#: web/concrete/blocks/flash_content/add.php:17
+#: web/concrete/blocks/flash_content/edit.php:20
+#, fuzzy
+msgid "best"
+msgstr ""
+
+#: web/concrete/blocks/next_previous/form_setup_html.php:46
+msgid "Chronological"
+msgstr ""
+
+#: web/concrete/single_pages/dashboard/reports/surveys.php:10
+msgid "Back to List"
+msgstr ""
+
+#: web/concrete/single_pages/dashboard/settings/view.php:800
+msgid "Toolbar Set"
+msgstr "プリセット"
+
+#: web/concrete/single_pages/dashboard/settings/view.php:814
+msgid "Editor Dimensions"
+msgstr "エディタ・サイズ"
+
+#: web/concrete/helpers/concrete/upgrade/version_54111.php:18
+#: web/concrete/helpers/concrete/upgrade/version_54111.php:19
+#: web/concrete/helpers/concrete/upgrade/version_54111.php:20
+msgid "Layout"
+msgstr "レイアウト"
+
+#: web/concrete/helpers/concrete/upgrade/version_542.php:47
+msgid "Composer Write"
+msgstr ""
+
+#: web/concrete/helpers/concrete/upgrade/version_542.php:52
+msgid "Composer Drafts"
+msgstr ""
+
+#: web/concrete/helpers/concrete/upgrade/version_542.php:57
+msgid "Composer PageType"
+msgstr ""
+
+#: web/concrete/elements/collection_metadata.php:161
+#, fuzzy
+msgid "Remember to include a slash before the page name, for example '/my-alternative-url'."
+msgstr ""
+
+#: web/concrete/elements/custom_style.php:149
+#, fuzzy
+msgid "Repeat"
+msgstr ""
+
+#: web/concrete/elements/custom_style.php:151
+#, fuzzy
+msgid "Horizontal"
+msgstr ""
+
+#: web/concrete/elements/custom_style.php:152
+msgid "Vertical"
+msgstr ""
+
+#: web/concrete/elements/block_groups.php:127
+msgid "Revert to Area Permissions"
+msgstr ""
+
+#: web/concrete/elements/attribute/type_form_required.php:55
+msgid "Content included in sitewide page search index."
+msgstr "サイト内ページ検索インデックスに含める"
+
+#: web/concrete/elements/attribute/type_form_required.php:56
+msgid "Field available in Dashboard Page Search."
+msgstr "ダッシュボードのページ検索で使用する"
+
+#: web/concrete/elements/attribute/type_form_required.php:59
+msgid "Content included in file search index."
+msgstr "ファイル検索インデックスに含める"
+
+#: web/concrete/elements/attribute/type_form_required.php:60
+msgid "Field available in File Manager Search."
+msgstr "ファイルマネージャ検索"
+
+#: web/concrete/elements/attribute/type_form_required.php:63
+msgid "Content included in user keyword search."
+msgstr "ユーザーキーワード検索に含める"
+
+#: web/concrete/elements/attribute/type_form_required.php:64
+msgid "Field available in Dashboard User Search."
+msgstr "ダッシュボードのユーザー検索で使用する"
+
+#: web/concrete/models/user_private_message.php:267
+#, php-format
+msgid "You may not send more than %s messages in %s minutes"
+msgstr ""
+
+#: web/concrete/models/block_types.php:548
+#, php-format
+msgid "No block found with the handle %s."
+msgstr ""
+
+#: web/concrete/tools/pile_manager.php:274
+msgid "New copy to Scrapbook"
+msgstr "下書きブロックに新規複製"
+
+#: web/concrete/tools/pile_manager.php:275
+msgid "Alias original to Scrapbook"
+msgstr "ブロックの更新を連動させる (Alias)"
+
+#: web/concrete/tools/page_controls_menu_js.php:33
+#, php-format
+msgid "%s is currently editing this page."
+msgstr "%s さんがこのページを編集しています"
+
+#: web/concrete/tools/files/properties.php:439
+msgid "Deleted User"
+msgstr ""
+
+#: web/concrete/tools/marketplace/download.php:76
+#, php-format
+msgid "Download the package from <a href=\"%s\">here</a>."
+msgstr ""
+
+#: web/concrete/libraries/log.php:96
+msgid "debug"
+msgstr "デバッグ"
+
