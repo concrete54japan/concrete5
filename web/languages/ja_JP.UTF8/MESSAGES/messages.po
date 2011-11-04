@@ -6308,11 +6308,6 @@ msgstr "ユーザーキーワード検索に含める"
 msgid "Field available in Dashboard User Search."
 msgstr "ダッシュボードのユーザー検索で使用する"
 
-#: web/concrete/models/user_private_message.php:267
-#, php-format
-msgid "You may not send more than %s messages in %s minutes"
-msgstr ""
-
 #: web/concrete/models/block_types.php:548
 #, php-format
 msgid "No block found with the handle %s."
