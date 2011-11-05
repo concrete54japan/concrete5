@@ -12,7 +12,6 @@ if (!$bObj->vHeight) {
 	$bObj->vHeight=344;
 }
 
-<?
 if (!$bObj->vWidth) {
 	$bObj->vWidth=425;
 }
