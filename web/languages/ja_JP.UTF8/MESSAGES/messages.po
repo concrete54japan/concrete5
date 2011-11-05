@@ -3671,7 +3671,7 @@ msgid "Are you sure you want to delete this file set?"
 msgstr "このセットを削除してもよろしいですか？"
 
 msgid "Browse the Marketplace"
-msgstr "マーケットプレイスを"
+msgstr ""
 
 msgid "You do not have access to download themes or add-ons from the marketplace."
 msgstr "このサイトをマーケットプレイスに接続する権限がありません。"
