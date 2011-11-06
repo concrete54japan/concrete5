@@ -482,7 +482,7 @@ define('MARKETPLACE_URL_CONNECT_TOKEN_NEW', CONCRETE5_ORG_URL.'/marketplace/conn
 define('MARKETPLACE_REMOTE_ITEM_LIST_WS', CONCRETE5_ORG_URL.'/marketplace/');
 
 if (!defined("MENU_HELP_URL")) {
-	define('MENU_HELP_URL', CONCRETE5_ORG_URL . '/tools/help_overlay/');
+	define('MENU_HELP_URL', 'http://www.concrete5-japan.org' . '/tools/help_overlay/');
 }
 
 if (!defined('MARKETPLACE_THEME_PREVIEW_URL')) {
