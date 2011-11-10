@@ -923,7 +923,7 @@ INSERT INTO Pages VALUES(1,1,'0',1,0,NULL,NULL,NOW(),NULL,NOW(),NULL,NULL,1,1,'O
  ,(79,0,'0',1,0,NULL,NULL,NULL,NULL,NOW(),NULL,NULL,1,15,'PARENT','/dashboard/settings/multilingual/view.php',0,NULL,0,0,1,52,0,0,-1,'0',0);
 
 
-INSERT INTO TaskPermissions VALUES(1,'access_task_permissions','Change Task Permissions','',0)
+INSERT INTO TaskPermissions VALUES(1,'access_task_permissions','タスク権限を変更します','',0)
 ,(2,'access_sitemap','サイトマップやページ検索へのアクセス権','',0)
 ,(3,'access_user_search','ユーザー検索へのアクセス権','',0)
 ,(4,'access_group_search','グループ検索へのアクセス権','',0)
