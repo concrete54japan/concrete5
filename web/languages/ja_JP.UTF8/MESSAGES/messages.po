@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: concrete5.4.2.1 Japanese\n"
 "Report-Msgid-Bugs-To: concrete5@concrete5-japan.org\n"
 "POT-Creation-Date: 2009-04-20 12:54-0700\n"
-"PO-Revision-Date: 2011-10-13 23:58+0900\n"
+"PO-Revision-Date: 2011-11-11 00:16+0900\n"
 "Last-Translator: \n"
 "Language-Team: Usagi Project <concrete5@concrete5-japan.org>\n"
 "MIME-Version: 1.0\n"
@@ -1793,10 +1793,10 @@ msgid "Loading..."
 msgstr "読み込み中"
 
 msgid "'s Scrapbook"
-msgstr "さんの下書きブロック"
+msgstr "さんのスクラップブック"
 
 msgid "Add From Scrapbook"
-msgstr "下書きから追加"
+msgstr "スクラップブックから追加"
 
 msgid "Add To %s"
 msgstr "%sに追加"
@@ -2555,7 +2555,7 @@ msgid "Upload"
 msgstr "アップロード"
 
 msgid "Upload Multiple"
-msgstr "複数アップロード"
+msgstr "マルチアップロード"
 
 msgid "Date Added"
 msgstr "登録日"
@@ -2642,13 +2642,13 @@ msgid "Search Members"
 msgstr "メンバー検索"
 
 msgid "You have no items in your scrapbook."
-msgstr "下書きには使用可能なアイテムが保存されていません。"
+msgstr "スクラップブックには使用可能なアイテムが保存されていません。"
 
 msgid "No blocks have been added to this scrapbook."
-msgstr "下書きブロックに追加されたブロックはありません。"
+msgstr "スクラップブックに追加されたブロックはありません。"
 
 msgid "Remove from Scrapbook"
-msgstr "下書きから削除"
+msgstr "スクラップブックから削除"
 
 msgid "Viewing <b>%s</b> to <b>%s</b> (<b>%s</b> Total)"
 msgstr "<b>%s</b>から<b>%s</b>までを表示 (計<b>%s</b>)"
@@ -2747,13 +2747,13 @@ msgid "All documents and images."
 msgstr "全てのドキュメントと画像"
 
 msgid "Scrapbook"
-msgstr "下書き"
+msgstr "スクラップブック"
 
 msgid "Share content across your site."
 msgstr "コンテンツをサイトで共有"
 
 msgid "Shared Scrapbook 1"
-msgstr "共有下書きブロック 1"
+msgstr "共有スクラップブック 1"
 
 msgid "Header Extra Content"
 msgstr "追加ヘッダー要素"
@@ -3671,7 +3671,7 @@ msgid "Are you sure you want to delete this file set?"
 msgstr "このセットを削除してもよろしいですか？"
 
 msgid "Browse the Marketplace"
-msgstr ""
+msgstr "マーケットプレイスから探す"
 
 msgid "You do not have access to download themes or add-ons from the marketplace."
 msgstr "このサイトをマーケットプレイスに接続する権限がありません。"
@@ -4136,13 +4136,13 @@ msgid "Number of Responses"
 msgstr "投稿数"
 
 msgid "Choose a Scrapbook"
-msgstr "下書きセットを選択"
+msgstr "スクラップブックを選択"
 
 msgid "Scrapbook Name"
-msgstr "下書きセット名"
+msgstr "スクラップブック名"
 
 msgid "%s's Personal Scrapbook"
-msgstr "%s さんの下書きセット"
+msgstr "%s さんのスクラップブック"
 
 msgid "View"
 msgstr "表示"
@@ -4151,19 +4151,19 @@ msgid "Rename"
 msgstr "名前変更"
 
 msgid "Are you sure you want to permantly delete this scrapbook?"
-msgstr "このブロックを削除してもよろしいですか（やり直しできません）？"
+msgstr "スクラップブックから削除してもよろしいですか（やり直しできません）？"
 
 msgid "Add a Global Scrapbook"
-msgstr "サイト共通下書きブロックを追加"
+msgstr "サイト共通スクラップブックを追加"
 
 msgid "&laquo; Return to Scrapbook List"
-msgstr "&laquo; 下書きセット一覧に戻る"
+msgstr "&laquo; スクラップブック一覧に戻る"
 
 msgid "Add Block to Scrapbook"
-msgstr "ブロックを下書きに追加"
+msgstr "ブロックをスクラップブックに追加"
 
 msgid "You have no items in this scrapbook."
-msgstr "保存された下書きブロックがありません。"
+msgstr "保存されたスクラップブックがありません。"
 
 msgid "Edit Importer"
 msgstr "インポーター編集"
@@ -5718,7 +5718,7 @@ msgid "Add Block"
 msgstr "ブロックを追加"
 
 msgid "Paste from Scrapbook"
-msgstr "下書きからペースト"
+msgstr "スクラップブックからペースト"
 
 msgid "Edit Layout"
 msgstr "レイアウトを編集"
@@ -5766,7 +5766,7 @@ msgid "Blocks arranged successfully."
 msgstr "ブロックは正常にアレンジされました。"
 
 msgid "Copy to Scrapbook"
-msgstr "下書きに保存"
+msgstr "スクラップブックにコピー"
 
 msgid "You must give your custom style preset a name."
 msgstr "カスタムスタイルプリセットに名前を付けてください。"
@@ -6048,10 +6048,10 @@ msgid "Error: Block not found."
 msgstr "エラー：ブロックが見つかりませんでした。"
 
 msgid "Please choose a scrapbook."
-msgstr "下書きブロックを選択して下さい。"
+msgstr "スクラップブックを選択して下さい。"
 
 msgid "Block added to scrapbook."
-msgstr "下書きに、このブロックが追加されました。"
+msgstr "ブロックがスクラップブックに追加されました。"
 
 msgid "You have no access to groups."
 msgstr "使用中のアカウントではグループにアクセスできません。"
@@ -6171,69 +6171,61 @@ msgstr "ファイルセット："
 
 #: web/concrete/blocks/youtube/view.php:17
 msgid "YouTube Video disabled in edit mode."
-msgstr ""
+msgstr "YouTubeビデオは編集モードでは非公開です。"
 
 #: web/concrete/blocks/youtube/form_setup_html.php:31
 msgid "YouTube URL"
 msgstr "YouTubeビデオURL"
 
 #: web/concrete/blocks/youtube/form_setup_html.php:51
-#, fuzzy
 msgid "iFrame - Works in more devices"
-msgstr ""
+msgstr "iFrame - 様々なデバイスで使用できる"
 
 #: web/concrete/blocks/youtube/form_setup_html.php:52
-#, fuzzy
 msgid "Flash Embed - Legacy method"
-msgstr ""
+msgstr "Flash埋め込み - 古い方法"
 
 #: web/concrete/blocks/survey/controller.php:217
 msgid "No data is available yet."
-msgstr ""
+msgstr "利用可能なデータはありません。"
 
 #: web/concrete/blocks/flash_content/add.php:12
 #: web/concrete/blocks/flash_content/edit.php:15
-#, fuzzy
 msgid "low"
-msgstr ""
+msgstr "低い"
 
 #: web/concrete/blocks/flash_content/add.php:13
 #: web/concrete/blocks/flash_content/edit.php:16
-#, fuzzy
 msgid "autolow"
-msgstr ""
+msgstr "低→高画質"
 
 #: web/concrete/blocks/flash_content/add.php:14
 #: web/concrete/blocks/flash_content/edit.php:17
-#, fuzzy
 msgid "autohigh"
-msgstr ""
+msgstr "高→低画質"
 
 #: web/concrete/blocks/flash_content/add.php:15
 #: web/concrete/blocks/flash_content/edit.php:18
-#, fuzzy
 msgid "medium"
-msgstr ""
+msgstr "中"
 
 #: web/concrete/blocks/flash_content/add.php:16
 #: web/concrete/blocks/flash_content/edit.php:19
-#, fuzzy
 msgid "high"
-msgstr ""
+msgstr "高"
 
 #: web/concrete/blocks/flash_content/add.php:17
 #: web/concrete/blocks/flash_content/edit.php:20
-#, fuzzy
 msgid "best"
-msgstr ""
+msgstr "最高"
 
 #: web/concrete/blocks/next_previous/form_setup_html.php:46
 msgid "Chronological"
-msgstr ""
+msgstr "時系列"
 
 #: web/concrete/single_pages/dashboard/reports/surveys.php:10
 msgid "Back to List"
-msgstr ""
+msgstr "一覧に戻る"
 
 #: web/concrete/single_pages/dashboard/settings/view.php:800
 msgid "Toolbar Set"
@@ -6251,38 +6243,35 @@ msgstr "レイアウト"
 
 #: web/concrete/helpers/concrete/upgrade/version_542.php:47
 msgid "Composer Write"
-msgstr ""
+msgstr "コンポーザー 投稿"
 
 #: web/concrete/helpers/concrete/upgrade/version_542.php:52
 msgid "Composer Drafts"
-msgstr ""
+msgstr "コンポーザー 草稿"
 
 #: web/concrete/helpers/concrete/upgrade/version_542.php:57
 msgid "Composer PageType"
-msgstr ""
+msgstr "コンポーザー ページタイプ"
 
 #: web/concrete/elements/collection_metadata.php:161
-#, fuzzy
 msgid "Remember to include a slash before the page name, for example '/my-alternative-url'."
-msgstr ""
+msgstr "ページ名の前にスラッシュをかならず入れて下さい。例: '/my-alternative-url'"
 
 #: web/concrete/elements/custom_style.php:149
-#, fuzzy
 msgid "Repeat"
-msgstr ""
+msgstr "繰り返し"
 
 #: web/concrete/elements/custom_style.php:151
-#, fuzzy
 msgid "Horizontal"
-msgstr ""
+msgstr "水平"
 
 #: web/concrete/elements/custom_style.php:152
 msgid "Vertical"
-msgstr ""
+msgstr "垂直"
 
 #: web/concrete/elements/block_groups.php:127
 msgid "Revert to Area Permissions"
-msgstr ""
+msgstr "エリアの権限に戻す"
 
 #: web/concrete/elements/attribute/type_form_required.php:55
 msgid "Content included in sitewide page search index."
@@ -6311,15 +6300,15 @@ msgstr "ダッシュボードのユーザー検索で使用する"
 #: web/concrete/models/block_types.php:548
 #, php-format
 msgid "No block found with the handle %s."
-msgstr ""
+msgstr "ハンドル %s のブロックが見つかりません。"
 
 #: web/concrete/tools/pile_manager.php:274
 msgid "New copy to Scrapbook"
-msgstr "下書きブロックに新規複製"
+msgstr "スクラップブックに新規複製"
 
 #: web/concrete/tools/pile_manager.php:275
 msgid "Alias original to Scrapbook"
-msgstr "ブロックの更新を連動させる (Alias)"
+msgstr "オリジナルのエイリアスをスクラップブックに作成する"
 
 #: web/concrete/tools/page_controls_menu_js.php:33
 #, php-format
@@ -6328,12 +6317,12 @@ msgstr "%s さんがこのページを編集しています"
 
 #: web/concrete/tools/files/properties.php:439
 msgid "Deleted User"
-msgstr ""
+msgstr "削除されたユーザー"
 
 #: web/concrete/tools/marketplace/download.php:76
 #, php-format
 msgid "Download the package from <a href=\"%s\">here</a>."
-msgstr ""
+msgstr "<a href=\"%s\">こちら</a>からパッケージをダウンロード"
 
 #: web/concrete/libraries/log.php:96
 msgid "debug"
