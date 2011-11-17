@@ -830,7 +830,7 @@ INSERT INTO PageSearchIndex VALUES(1,'オープンソース CMS - concrete5 に�
 
 INSERT INTO PageThemes VALUES(1,'default','プレーンヨーグルト\n','concrete5 デフォルトテーマ',0)
  ,(2,'greensalad','グリーンサラダ\n','緑を基調としたconcrete5 デフォルトテーマ',0)
- ,(3,'dark_chocolate','ダークチョコレート\n','concrete5デフォルトの黒を基調としたテーマ￥',0);
+ ,(3,'dark_chocolate','ダークチョコレート\n','concrete5デフォルトの黒を基調としたテーマ',0);
 
 INSERT INTO PageTypeAttributes VALUES(1,1)
  ,(1,2)
