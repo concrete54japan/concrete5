@@ -16,7 +16,7 @@
         alias = alias.replace(/[\u00C5\u00E5]/gi, "aa");            // Œ    
         alias = alias.replace(/[\u00E8\u00C8\u00E9\u00C9]/gi, "e"); // ƒé 
 		
-		alias = alias.replace(/[^0-9A-Za-z]/gi, "<?=PAGE_PATH_SEPARATOR?>");
+		//alias = alias.replace(/[^0-9A-Za-z]/gi, "<?=PAGE_PATH_SEPARATOR?>");
 		alias = alias.replace(/<?=PAGE_PATH_SEPARATOR?>+/gi, '<?=PAGE_PATH_SEPARATOR?>');
 		if (alias.charAt(alias.length-1) == '<?=PAGE_PATH_SEPARATOR?>') {
 			alias = alias.substring(0,alias.length-1);
