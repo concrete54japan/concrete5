@@ -10,4 +10,4 @@ defined('C5_EXECUTE') or die("Access Denied.");
 <br/>
 
 <h2><?=t('Full Documentation')?></h2>
-<div><?=t('Full documentation is available <a href="%s">at Concrete5.org</a>', 'http://www.concrete5.org/docs/')?>.</div><br/>
+<div><?=t('Full documentation is available <a href="%s">at Concrete5.org</a>', 'http://www.concrete5-japan.org/help/')?>.</div><br/>
