@@ -559,7 +559,7 @@ INSERT INTO CollectionVersions VALUES(2,1,NULL,NULL,NULL,NOW(),NOW(),'初稿',1,
  ,(33,1,'グループ','groups',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(34,1,'ユーザー項目','attributes',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(35,1,'ログイン & ユーザー登録','registration',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
- ,(36,1,'下書き','scrapbook','ブロックをサイト全体で使い回す',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
+ ,(36,1,'スクラップブック','scrapbook','ブロックをサイト全体で使い回す',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(37,1,'ページとテーマ','pages','デザイン管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(38,1,'テーマ','themes','デザインを管理',NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
  ,(39,1,'テーマ追加','add',NULL,NOW(),NOW(),'初稿',1,0,1,NULL,NULL)
