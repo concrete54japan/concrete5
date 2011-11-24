@@ -389,17 +389,16 @@ saveMaintenanceMode = function() {
 			<div class="ccm-dashboard-radio">
 				<?=$form->checkbox('ip_ban_lock_ip_enable', 1, $ip_ban_enable_lock_ip_after)?> <?=t('Lock IP after')?>
 				
-				<?=$form->text('ip_ban_lock_ip_attempts', $ip_ban_lock_ip_after_attempts, array('style'=>'width:30px'))?>
-				<?=t('failed login attempts');?>		
-				in		
 				<?=$form->text('ip_ban_lock_ip_time', $ip_ban_lock_ip_after_time, array('style'=>'width:30px'))?>				
-				<?=t('seconds');?>				
+				<?=t('seconds');?> 秒に		
+				<?=$form->text('ip_ban_lock_ip_attempts', $ip_ban_lock_ip_after_attempts, array('style'=>'width:30px'))?>
+				<?=t('failed login attempts');?> 失敗した場合		
 			</div>	
 			<div class="ccm-dashboard-radio">
 				<?=$form->radio('ip_ban_lock_ip_how_long_type', $ip_ban_lock_ip_how_long_type_timed, $ip_ban_lock_ip_how_long_type)?> <?=t('Ban IP For')?>	
 				<?=$form->text('ip_ban_lock_ip_how_long_min', $ip_ban_lock_ip_how_long_min, array('style'=>'width:30px'))?>				
-				<?=t('minutes');?>
-				<?=$form->radio('ip_ban_lock_ip_how_long_type', $ip_ban_lock_ip_how_long_type_forever, $ip_ban_lock_ip_how_long_type)?> <?=t('Forever')?>					
+				<?=t('minutes');?> 間ブロック、もしくは
+				<?=$form->radio('ip_ban_lock_ip_how_long_type', $ip_ban_lock_ip_how_long_type_forever, $ip_ban_lock_ip_how_long_type)?> <?=t('Forever')?> ブロック				
 			</div>
 			
 			<Div style="height: 10px">&nbsp;</div>
