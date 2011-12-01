@@ -112,7 +112,7 @@ for ($i = 0; $i < count($ctArray); $i++) {
 
 		<div class="ccm-field">	
 			<div class="ccm-field-one" style="width: 400px">
-				<label><?=t('Name')?></label> <input type="text" name="cName" value="" class="text" style="width: 100%" onKeyUp="makeAlias(this.value, 'cHandle')" >
+				<label><?=t('Name')?></label> <input type="text" name="cName" value="" class="text" style="width: 100%" >
 			</div>
 			
 			<div class="ccm-field-two" style="width: 200px"	>
