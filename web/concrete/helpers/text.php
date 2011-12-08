@@ -27,6 +27,7 @@ class TextHelper {
 	 */
 	function sanitizeFileSystem($handle, $leaveSlashes=false) {
 		$handle = trim($handle);
+		$handle = html_entity_decode($handle);
 		$handle = str_replace(PAGE_PATH_SEPARATOR, '-', $handle);
 		$searchMulti = array(
 			"ä",
@@ -54,15 +55,15 @@ class TextHelper {
 		
 		$handle = str_replace($searchMulti, $replaceMulti, $handle);
 
-		$searchNormal = array("/[&]/", "/[\s]+/",  "/-+/");
-		$searchSlashes = array("/[&]/", "/[\s]+/",  "/-+/");
-		$replace = array("and", "-",  "-");
+
+        $searchNormal = array("/[&]/", "/[\s]+/", "/-+/");
+		$replace = array("and", "-", "-");
 		
 		$search = $searchNormal;
 		if ($leaveSlashes) {
-			$search = $searchSlashes;
+			$search = array("/[&]/", "/[\s]+/", "/[\/]/", "/-+/");
+			$replace = array("and", "-", "", "-");
 		}
-
 		$handle = preg_replace($search, $replace, $handle);
 		if (function_exists('mb_strtolower')) {
 			$handle = mb_strtolower($handle, APP_CHARSET);
