@@ -168,7 +168,7 @@ if ($cp->canAdminPage()) {
 						$ppID = $path['ppID'];
 						$cPath = $path['cPath'];
 						echo '<span class="ccm-meta_path">' .
-			     			'<input type="text" name="ppURL-' . $ppID . '" class="ccm-input-text" value="' . htmlentities($cPath,ENT_QUOTES,APP_CHARSET)h . '" id="ppID-'. $ppID . '"> ' .
+			     			'<input type="text" name="ppURL-' . $ppID . '" class="ccm-input-text" value="' .htmlentities($cPath,ENT_QUOTES,APP_CHARSET). '" id="ppID-'. $ppID . '"> ' .
 			     			'<a href="javascript:void(0)" class="ccm-meta-path-del">' . t('Remove Path') . '</a></span>'."\n";
 					}
 				}
