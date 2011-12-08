@@ -38,7 +38,8 @@ class TextHelper {
 			"ø",
 			"å",
 			"é",
-			"è"	
+			"è",
+			"?"
 		);
 
 		$replaceMulti = array(
@@ -50,16 +51,16 @@ class TextHelper {
 			'oe',
 			'aa',
 			'e',
-			'e'
+			'e',
+			'？'
 		);
 		
 		$handle = str_replace($searchMulti, $replaceMulti, $handle);
 
 
-        $searchNormal = array("/[&]/", "/[\s]+/", "/-+/");
+        $search = array("/[&]/", "/[\s]+/", "/-+/");
 		$replace = array("and", "-", "-");
 		
-		$search = $searchNormal;
 		if ($leaveSlashes) {
 			$search = array("/[&]/", "/[\s]+/", "/[\/]/", "/-+/");
 			$replace = array("and", "-", "", "-");
