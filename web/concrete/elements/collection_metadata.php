@@ -148,8 +148,8 @@ if ($cp->canAdminPage()) {
 		<label><?= t('Canonical URL')?></label>
 		<?php if (!$c->isGeneratedCollection()) { ?>
 			<?=BASE_URL . DIR_REL;?><? if (URL_REWRITING == false) { ?>/<?=DISPATCHER_FILENAME?><? } ?><?
-			$cPath = substr($c->getCollectionPath(), strrpos($c->getCollectionPath(), '/') + 1);
-			print substr($c->getCollectionPath(), 0, strrpos($c->getCollectionPath(), '/'))?>/<input type="text" name="cHandle" class="ccm-input-text" value="<?php echo $cPath?>" id="cHandle"><input type="hidden" name="oldCHandle" id="oldCHandle" value="<?php echo $c->getCollectionHandle()?>"><br /><br />
+			$cPath = substr($c->cPath, strrpos($c->cPath, '/') + 1);
+			print htmlentities(substr($c->cPath, 0, strrpos($c->cPath, '/')),ENT_QUOTES,APP_CHARSET)?>/<input type="text" name="cHandle" class="ccm-input-text" value="<?php echo htmlentities($cPath,ENT_QUOTES,APP_CHARSET)?>" id="cHandle"><input type="hidden" name="oldCHandle" id="oldCHandle" value="<?php echo $c->getCollectionHandle()?>"><br /><br />
 		<?php  } else { ?>
 			<?php echo $c->getCollectionHandle()?><br /><br />
 		<?php  } ?>
@@ -168,14 +168,14 @@ if ($cp->canAdminPage()) {
 						$ppID = $path['ppID'];
 						$cPath = $path['cPath'];
 						echo '<span class="ccm-meta_path">' .
-			     			'<input type="text" name="ppURL-' . $ppID . '" class="ccm-input-text" value="' . $cPath . '" id="ppID-'. $ppID . '"> ' .
+			     			'<input type="text" name="ppURL-' . $ppID . '" class="ccm-input-text" value="' . htmlentities($cPath,ENT_QUOTES,APP_CHARSET)h . '" id="ppID-'. $ppID . '"> ' .
 			     			'<a href="javascript:void(0)" class="ccm-meta-path-del">' . t('Remove Path') . '</a></span>'."\n";
 					}
 				}
 			?>
 		    <span class="ccm-meta-path">
 	     		<?php echo BASE_URL . DIR_REL;?><?php  if (URL_REWRITING == false) { ?>/<?php echo DISPATCHER_FILENAME?><?php  } ?><?php 
-			print substr($c->getCollectionPath(), 0, strrpos($c->getCollectionPath(), '/'))?> <input type="text" name="ppURL-add-0" class="ccm-input-text" value="" id="ppID-add-0">
+			print htmlentities(substr($c->cPath, 0, strrpos($c->cPath, '/')),ENT_QUOTES,APP_CHARSET)?> <input type="text" name="ppURL-add-0" class="ccm-input-text" value="" id="ppID-add-0">
 		 		<a href="javascript:void(0)" class="ccm-meta-path-add"><?=t('Add Path')?></a>
 			</span>
 			</div>
