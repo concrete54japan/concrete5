@@ -1188,9 +1188,9 @@ class Page extends Collection {
             $cHandle = $this->getCollectionHandle();
         } else if (!$data['cHandle']) {
             // make the handle out of the title
-            $cHandle = $txt->sanitizeFileSystem($cName);
+            $cHandle = $txt->sanitizeFileSystem($cName,true);
         } else {
-            $cHandle = $txt->sanitizeFileSystem($data['cHandle']);
+            $cHandle = $txt->sanitizeFileSystem($data['cHandle'],true);
         }
 		
 		$cName = $txt->sanitize($cName);
@@ -2215,9 +2215,9 @@ class Page extends Collection {
 		
 		if (!$data['cHandle']) {
 			// make the handle out of the title
-			$handle = $txt->sanitizeFileSystem($data['name']);
+			$handle = $txt->sanitizeFileSystem($data['name'],true);
 		} else {
-			$handle = $txt->sanitizeFileSystem($data['cHandle']);
+			$handle = $txt->sanitizeFileSystem($data['cHandle'],true);
 		}
 		
 		$data['handle'] = $handle;
